@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="css/inicioSesion.css" type="text/css"/>
+    <meta description="Página de inicio de sesión del sistema de gestión de reservas del hotel Jumeirah Emirates Towers."/>
+</head>
+<body id="bodyInicio">
+    <div class="whiteBox">
+            
+    </div>
+    
+    <head>
+        <nav>
+            <div class="logo">
+                <img src="images/jhrlogo2019white.webp" alt="logo">
+            </div>
+            <ul>
+                <li><a href="#">HomePage</a></li>
+                <li><a href="#">Cuartos y Suits</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Usuarios</a></li>
+            </ul>
+            <div class="login_button">
+                <a href="#">Login</a>
+            </div>
+        </nav>
+    </head>
+
+    <div id="titleInicio">
+        <h1>Jumeriah Emirates Towers <br/> Sistema de gestión de reservaciones</h1>
+    </div>
+
+    <div id="form">
+         <form action="" method="">
+            <select name="userRol">
+                <option value="selectRol">Seleccione su rol</option>
+                <option value="Huesped">Huesped</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Superadministrador">Superadministrador</option>
+            </select>
+            <br/>
+            <label>Email</label> 
+            <br/>
+            <input type="text" name="emailUser" autocomplete="email"/>
+            <br/>
+            <label>Contraseña</label> 
+            <br/>
+            <input type="password" name="passwordUser" autocomplete="password"/>
+            <br/>
+        </form>
+        <div id="buttons">
+            <input class="button" type="submit" value="Iniciar Sesión"/>
+            <input class="button" type="submit" value="Registarse"/>
+        </div>
+        
+    </div>
+</body>
+</html>
