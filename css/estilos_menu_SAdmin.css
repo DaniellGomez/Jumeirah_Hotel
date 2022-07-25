@@ -2,19 +2,21 @@
 @import url("https://fonts.googleapis.com/css?family=Kaisei+Decol:400");
 
 .menu-superadmin{
-position: relative;
+position: absolute;
+top:0%;
+left: 0%;
 width: 1280px;
 height: 720px;
+background-image: URL("../images/Jumeirah+Beach+Hotel_FP001.jpeg");
+background-position: 50% 50%;
+background-size: cover;
 
-background: #FFFFFF;
+
 }
 
 .overlap-group3{
     display: flex;
     align-items: flex-start;
-    background-image: URL("../images/Jumeirah+Beach+Hotel_FP001.jpeg");
-    background-position: 50% 50%;
-    background-size: cover;
     flex-direction: column;
     height: 720px;
     width: 1280px;
