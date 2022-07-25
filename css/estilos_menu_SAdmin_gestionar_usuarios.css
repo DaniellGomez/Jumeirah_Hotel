@@ -323,3 +323,8 @@ select{
     align-self: center;
 
 }
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}

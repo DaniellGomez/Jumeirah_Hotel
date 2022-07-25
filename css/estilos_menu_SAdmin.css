@@ -385,3 +385,8 @@ color: #FFFFFF;
     flex-direction: column;
     justify-content: center;
 } 
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
