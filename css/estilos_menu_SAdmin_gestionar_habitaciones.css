@@ -64,7 +64,7 @@ nav .login_button{
     font-style: normal;
     text-align: center;
     background-color: #FFFFFF;
-    background-image: url(../images/Jumeirah+Beach+Hotel_FP001.jpeg);
+    background-image: url(../images/gestionHabitacionesFondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -101,7 +101,7 @@ label {
 
 .forms_container{
     background-color: rgba(217,217,217,1);
-    height: 70%;
+    height: 80%;
     width: 95%;
     opacity: 95%;
     display: flex;
@@ -153,18 +153,30 @@ label {
     letter-spacing: 0;
 }
 
+.forms {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-right {
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+}
+
 .form_registro{
     display: flex;
     background-color: rgb(231, 227, 216);
-    height: 28rem;
+    height: 26rem;
     position: absolute;
-    top: 5rem;
+    top: 3rem;
     align-items: center;
     left: 1.5rem;
     flex: none;
     justify-content: space-between;
     order: 1;
-
+    width: 45%;
+    align-items: center;
 }
 
 .form_title{
@@ -187,15 +199,30 @@ label {
     background-color: rgb(231, 227, 216);
     height: 10rem;
     position: absolute;
-    top: 5rem;
+    top: 3rem;
     right: 3rem;
     width: 35rem;
     justify-self:center;
     align-items: center;
     flex: none;
     order: 2;
-    
+    width: 45%;
+}
 
+.buscarButton {
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 7rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: relative;
+    left: 11rem;
+    top: 1rem;
 }
 
 .form_editar{
@@ -203,13 +230,33 @@ label {
     background-color: rgb(231, 227, 216);
     height: 17rem;
     position: absolute;
-    top: 16rem;
+    top: 13rem;
     right: 3rem;
     width: 35rem;
     flex: none;
     order: 3;
     align-items: center;
+    width: 45%;
+}
 
+.inputResultado {
+    position: flex;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-left: 25px;
+    padding: 10px;
+    width: 100%;
+}
+
+.resultadoInput {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-left: 25px;
+    width: 60%;
+    left:30%;
 }
 
 .agregar-habitacion-group{
@@ -226,13 +273,17 @@ label {
     position: absolute;
     left: 10rem;
     bottom: 4rem;
-    
-
 }
 
 .agregar-habitacion{
     letter-spacing: 0;
     color: #FFFFFF;
+}
+
+.centerButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .buscar-group{
@@ -305,9 +356,31 @@ label {
 }
 
 .input-object{
-   
-    
+   display: flex;
+   flex-direction: row;
+   padding: 10px;
+   left: 100px;
+   width: 100%;
+   padding-left: 15px;
+}
 
+.agregarInput {
+    position: absolute;
+    width: 50%;
+    left: 25px;
+    left: 170px;
+}
+
+.inputBuscar {
+    position: flex;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-left: 25px;
+}
+
+#room_number {
+    width: 50%;
 }
 
 input{
