@@ -334,3 +334,22 @@ a{
     text-decoration: none;
     color: #FFFFFF;
 }
+
+nav .login_button:hover{
+    background-color: dimgrey;
+}
+div .agregar-habitacion-group:hover{
+    background-color: dimgrey;
+}
+div .buscar-group:hover{
+    background-color: dimgrey;
+}
+div .actualizar-group:hover{
+    background-color: dimgrey;
+}
+div .eliminar-group:hover{
+    background-color: darkred;
+}
+div .salir-group:hover{
+    background-color: darkred;
+}

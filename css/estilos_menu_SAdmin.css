@@ -390,3 +390,29 @@ a{
     text-decoration: none;
     color: #FFFFFF;
 }
+
+div .login:hover{
+    background-color: dimgrey;
+}
+div .overlap-group1:hover{
+    background-color: dimgrey;
+}
+div .overlap-group2:hover{
+    background-color: dimgrey;
+}
+div .overlap-group:hover{
+    background-color: darkred;
+}
+
+.navbar-link-home-page:hover{
+    color: rgb(205, 153, 22);
+}
+.navbar-link-contacto:hover{
+    color: rgb(205, 153, 22);
+}
+.navbar-link-cuartos-y-suits:hover{
+    color: rgb(205, 153, 22);
+}
+.navbar-link-usuarios:hover{
+    color: rgb(205, 153, 22);
+}

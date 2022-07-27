@@ -189,8 +189,8 @@ label {
     height: 10rem;
     position: absolute;
     top: 5rem;
-    right: 3rem;
-    width: 35rem;
+    right: 7rem;
+    width: 30rem;
     justify-self:center;
     align-items: center;
     flex: none;
@@ -205,8 +205,8 @@ label {
     height: 17rem;
     position: absolute;
     top: 16rem;
-    right: 3rem;
-    width: 35rem;
+    right: 7rem;
+    width: 30rem;
     flex: none;
     order: 3;
     align-items: center;
@@ -327,4 +327,23 @@ select{
 a{
     text-decoration: none;
     color: #FFFFFF;
+}
+
+nav .login_button:hover{
+    background-color: dimgrey;
+}
+div .agregar-habitacion-group:hover{
+    background-color: dimgrey;
+}
+div .buscar-group:hover{
+    background-color: dimgrey;
+}
+div .actualizar-group:hover{
+    background-color: dimgrey;
+}
+div .eliminar-group:hover{
+    background-color: darkred;
+}
+div .salir-group:hover{
+    background-color: darkred;
 }
