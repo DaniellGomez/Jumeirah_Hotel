@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css?family=Kaisei+Decol:400");
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+nav{
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 4rem;
+    font-family: var(font-title);
+    position: fixed;
+    z-index: 100;
+}
+
+nav .logo{
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+nav .logo img{
+    height: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size:1.2rem;
+}
+
+nav ul li,a{
+    color: #FFFFFF;
+    margin: 0px 1rem 0px 1rem;
+    text-decoration: none;
+}
+
+/* nav ul li:nth-child(4){
+    display: none;
+} */
+
+nav .login_button{
+    margin-right: 2rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    padding: .3rem;
+}
+
+.general_frame{
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    left: 0%;
+    top: 0%;
+    background: none;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    text-align: center;
+    background-color: #FFFFFF;
+    background-image: url(../images/gestionUsuariosFondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+   
+    
+}
+
+h1 {
+    margin: auto;
+    padding-top: 1.5%;
+    font-size: 1rem;
+}
+
+
+select {
+    font-family: 'Hind';
+    font-style: normal;
+    background-color:#AAA;
+    width: 400px;
+}
+
+input {
+    background-color: #AAA;
+    width: 400px;
+    font-family: 'Hind';
+    font-style: normal;
+}
+
+label {
+    font-family: 'Hind';
+    font-style: normal;
+}
+
+
+.forms_container{
+    background-color: rgba(217,217,217,1);
+    height: 80%;
+    width: 95%;
+    opacity: 95%;
+    display: flex;
+    position: absolute;
+    left: 2rem;
+    top: 6rem;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    border-radius: 20px;
+}
+
+.container_title{
+    background-color: #323232;
+    width: 100%;
+    height:8%;
+    flex: none;
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.title{
+    color: white;
+    font-family: "Kaisei Decol";
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    position: absolute;
+    left: 40%;
+    top: -2%;
+}
+
+.salir-group{
+    display: flex;
+    align-items: center;
+    background-color: #755b5b;
+    border-radius: 70px;
+    height: 2rem;
+    position: absolute;
+    padding: 10px 27.7px;
+    width: 2rem;
+    bottom: 1rem;
+    right: 2rem;
+    justify-content: center;
+    
+
+}
+
+.salir{
+    letter-spacing: 0;
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+    top: 5%;
+}
+
+.form_registro{
+    display: flex;
+    background-color: rgb(231, 227, 216);
+    height: 28rem;
+    position: absolute;
+    top: 10%;
+    align-items: center;
+    justify-content: center;
+    left: 5rem;
+    flex: none;
+    order: 1;
+    width: 40%;
+}
+
+.formRigth {
+    display:flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.form_title{
+    background-color: rgba(49, 49, 49, 1);
+    display: flex;
+    height: 2rem;
+    top: -2.5rem;
+    color:#FFFFFF;
+    font-family: "Kaisei Decol";
+    align-self:flex-start;
+    position: relative;
+    width: 100%;
+    flex: none;
+    order:0;
+    padding: 0px;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+#registrarTitle {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+.form_buscar{
+    display: flex;
+    background-color: rgb(231, 227, 216);
+    height: 10rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    order: 2;
+    
+
+}
+
+.consultaLabel {
+    position: absolute;
+    left: 5%;
+    top: 45%;
+}
+
+.consultaInput {
+    position: absolute;
+    width: 70%;
+    left: 25%;
+}
+
+.form_editar{
+    display: flex;
+    background-color: rgb(231, 227, 216);
+    height: 17rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 45%;
+    flex: none;
+    order: 3;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.agregar-usuario-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    margin-top: 3rem;
+}
+
+.agregar-usuario{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.buscar-group{
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 10rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 10rem;
+    bottom: 0.4rem;
+    
+
+}
+
+.buscar{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.actualizar-group{
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 8rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 5rem;
+    bottom: 0.3rem;
+    
+
+}
+
+.resultadoLabel {
+    position: absolute;
+    left: 5%;
+}
+
+.resultadoInput {
+    position: absolute;
+    width: 70%;
+    left: 25%;
+}
+
+.actualizar{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.eliminar-group{
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 8rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 17rem;
+    bottom: 0.3rem;
+    
+
+}
+
+.eliminar{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.input-object{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: 15px;
+}
+
+.registrarInput {
+    position: absolute;
+    width: 50%;
+    left: 45%;
+
+}
+
+.registrarLabel {
+    position: absolute;
+    left: 5%;
+}
+
+input{
+    padding: 0.1rem;
+    margin: auto;
+    left: 1rem;
+    width: 25rem;
+    font-family: "Kaisei Decol";
+    align-self: center;
+
+}
+
+select{
+    padding: 0.1rem;
+    margin: auto;
+    left: 1rem;
+    width: 25rem;
+    font-family: "Kaisei Decol";
+    align-self: center;
+
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav .login_button:hover{
+    background-color: dimgrey;
+}
+div .agregar-habitacion-group:hover{
+    background-color: dimgrey;
+}
+div .buscar-group:hover{
+    background-color: dimgrey;
+}
+div .actualizar-group:hover{
+    background-color: dimgrey;
+}
+div .eliminar-group:hover{
+    background-color: darkred;
+}
+div .salir-group:hover{
+    background-color: darkred;
+}
+
+div .agregar-usuario-group:hover{
+    background-color: dimgrey;
+}

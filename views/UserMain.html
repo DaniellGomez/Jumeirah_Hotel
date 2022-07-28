@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/UserMain.css">
+    <title>Cuartos Y Suits</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../images/jhrlogo2019white.webp" alt="logo">
+        </div>
+        <ul>
+            <li><a href="HomePage.html">Home Page</a></li>
+            <li><a href="UserMain.html">Cuartos y Suits</a></li>
+            <li><a href="formularioContacto.html">Contacto</a></li>
+            <li><a href="#">Usuarios</a></li>
+        </ul>
+        <div class="login_button">
+            <a href="inicioSesion.html">Login</a>
+        </div>
+    </nav>
+
+    <div class="container">
+            <h1>Habitacion Estandar</h1>
+            <div class="filters">
+                <div class="input_selector">
+                    <input type="date" name="fecha" id="fecha">
+                </div>
+                <div class="input_selector">
+                    <select name="capacidad" id="capacidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="room_finded">
+                <h2>Cuarto Doble</h2>
+                <div class="room_content">
+                    <div class="image">
+                        <img src="../images/Habitacion_Estandar.png" alt="Image">
+                    </div>
+                    <div class="room_info">
+                        <div class="info_item">
+                            <h3>Nro de Cuarto</h3>
+                            <p>402</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Camas</h3>
+                            <p>Una cama Doble</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Personas</h3>
+                            <p>2 Personas</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Baño</h3>
+                            <p>Ducha duble y tina doble</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Servicios</h3>
+                            <p>Comida al cuarto 24hrs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_actions">
+
+                    <div class="room_button">
+                        <a href="#">Eliminar</a>
+                    </div>
+                    <div class="room_button">
+                        <a href="#">Editar</a>
+                    </div>
+                    <div class="room_button">
+                        <a href="#">Reservar</a>
+                    </div>
+
+                </div>
+                
+            </div>
+    </div>
+
+    <script src="../js/UserMainJs.js"></script>
+</body>
+</html>

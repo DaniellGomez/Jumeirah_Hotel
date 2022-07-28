@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Habitaciones</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilos_menu_SAdmin_gestionar_habitaciones.css" />
+</head>
+
+<body>
+    <div class="whiteBox">
+
+    </div>
+
+    <head>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo2.webp" alt="logo">
+            </div>
+            <ul>
+                <li><a href="HomePage.html">HomePage</a></li>
+                <li><a href="UserMain.html">Cuartos y Suits</a></li>
+                <li><a href="formularioContacto.html">Contacto</a></li>
+                <li><a href="SAdmin_gestionar_usuarios.html">Usuarios</a></li>
+            </ul>
+            <div class="login_button">
+                <a href="inicioSesion.html">Login</a>
+            </div>
+        </nav>
+    </head>
+    <div class="general_frame">
+        <div class="forms_container">
+            <div class="container_title"></div>
+            <h1 class="title valign-text-middle">Gestionar Habitaciones</h1>
+            <div class="salir-group valign-text-middle">
+                <div class="salir"><a href="./menu_SAdmin.html">Salir</a></div>
+            </div>
+            <div class="forms">
+                
+                <div class="form_registro">
+                    <form action="" method="">
+                        <div class="form_title">
+                            <h1>Agregar Habitaciones</h1>
+                        </div>
+                        <div class="input-object">
+                            <label for="user_name">Número de Habitación</label>
+                            <input class="agregarInput" type="text" name="room_number" id="room_number">
+                        </div>
+                        <div class="input-object">
+                            <label for="room_capacity">Capacidad:</label>
+                            <select class="agregarInput" id="room_capacity" name="room_capacity">
+                                <option value="Individual">Individual</option>
+                                <option value="2_personas">2 personas</option>
+                                <option value="4_personas">4 personas</option>
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label for="room_layout">Acomodación:</label>
+                            <select class="agregarInput" id="room_layout" name="room_layout">
+                                <option value="1_cama_sencilla">1 cama sencilla</option>
+                                <option value="1_cama_doble">1 cama doble</option>
+                                <option value="2_camas_dobles">2 camas dobles</option>
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label for="room_bath">Baño:</label>
+                            <select class="agregarInput" id="room_bath" name="room_bath">
+                                <option value="bano_estandar">Baño Estándar</option>
+                                <option value="bano_jacuzzi">Baño con Jacuzzi</option>
+                                <option value="bano_doble_jacuzzi">Baño doble con Jacuzzi</option>
+                            </select>
+                        </div>
+                        <div class="centerButton">
+                            <div class="agregar-habitacion-group">
+                                <div class="agregar-habitacion valign-text-middle"><a href="#">Agregar Habitacion</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="form_rigth">
+                    <div class="form_buscar">
+                        <form action="" method="">
+                            <div class="form_title">
+                                <h1>Consulta y Edición de Habitaciones</h1>
+                            </div>
+                            <div class="inputBuscar">
+                                <label for="room_number">Número Habitación</label>
+                                <input type="text" name="room_number" id="room_number">
+                            </div>
+                            <div>
+                                <div class="buscarButton"><a href="#">Buscar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="form_editar">
+                        <form action="" method="">
+                            <div class="form_title">
+                                <h1>Resultado de la búsqueda</h1>
+                            </div>
+                            <div class="inputResultado">
+                                <label for="room_capacity">Capacidad:</label>
+                                <select class="resultadoInput" id="room_capacity" name="room_capacity">
+                                    <option value="Individual">Individual</option>
+                                    <option value="2_personas">2 personas</option>
+                                    <option value="4_personas">4 personas</option>
+                                </select>
+                            </div>
+                            <div class="inputResultado">
+                                <label for="room_layout">Acomodación:</label>
+                                <select class="resultadoInput" id="room_layout" name="room_layout">
+                                    <option value="1_cama_sencilla">1 cama sencilla</option>
+                                    <option value="1_cama_doble">1 cama doble</option>
+                                    <option value="2_camas_dobles">2 camas dobles</option>
+                                </select>
+                            </div>
+                            <div class="inputResultado">
+                                <label for="room_bath">Baño:</label>
+                                <select class="resultadoInput" id="room_bath" name="room_bath">
+                                    <option value="bano_estandar">Baño Estándar</option>
+                                    <option value="bano_jacuzzi">Baño con Jacuzzi</option>
+                                    <option value="bano_doble_jacuzzi">Baño doble con Jacuzzi</option>
+                                </select>
+                            </div>
+                            <div class="actualizar-group">
+                                <div class="actualizar valign-text-middle"><a href="#">Actualizar</a>
+                                </div>
+                            </div>
+                            <div class="eliminar-group">
+                                <div class="eliminar valign-text-middle"><a href="#">Eliminar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
