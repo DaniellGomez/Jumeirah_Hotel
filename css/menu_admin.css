@@ -1,14 +1,19 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 nav{
     background-color: #323232;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 98.5%;
+    width: 100%;
     height: 4rem;
     font-family: var(font-title);
     position: fixed;
     z-index: 100;
-    border-radius: 5px;
 }
 
 nav .logo{
@@ -56,18 +61,17 @@ nav .login_button:hover{
 
 
 body{
-    background-image: url(../images/unsplash_g5ZIXjzRGds.png);
+    background-image: url(../images/fondoMenuAdmin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 30%;
 }
 
 .cuerpo{
     position: absolute;
     width: 66%;
-    height: 80%;
+    height: 70%;
     left: 20%;
-    top: 15%;
+    top: 25%;
     background: #FFFFFF;
     opacity: 0.9;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
@@ -84,8 +88,8 @@ body{
     position: absolute;
     width: 711px;
     height: 72px;
-    left: 55px;
-    top: 10px;
+    left: 20%;
+    top: 0;
     
     font-family: 'Kaisei Decol';
     font-style: normal;
@@ -104,8 +108,8 @@ body{
     position: absolute;
     width: 382px;
     height: 66px;
-    left: 265px;
-    top: 124px;
+    left: 25%;
+    top: 15%;
     background: #323232;
     border-radius: 50px;
     margin-top: 40px;
@@ -115,18 +119,19 @@ body{
     position: absolute;
     width: 382px;
     height: 66px;
-    left: 265px;
-    top: 297px;
+    left: 25%;
+    top: 50%;
     background: #323232;
     border-radius: 50px;
 }
+
 
 .opcionsalir{
     position: absolute;
     width: 110px;
     height: 50px;
-    left: 745px;
-    top: 400px;
+    left: 60%;
+    top: 75%;
     background: #765B5B;
     border-radius: 70px;
 }
@@ -180,6 +185,7 @@ body{
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+    margin: auto;
 }
 
 div .opcion1:hover{

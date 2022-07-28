@@ -111,26 +111,30 @@ label {
     align-content: space-between;
     justify-content: space-between;
     flex-flow: row wrap;
+    border-radius: 20px;
 }
 
 .container_title{
-    background-color: rgb(231, 227, 216);
+    background-color: #323232;
     width: 100%;
     height:8%;
     flex: none;
     order: 0;
-    
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .title{
-    color: black;
+    color: white;
     font-family: "Kaisei Decol";
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0;
     position: absolute;
-    left: 2rem;
-    top: -0.5rem;
+    left: 40%;
+    top: -2%;
+    height: 40%;
 }
 
 .salir-group{

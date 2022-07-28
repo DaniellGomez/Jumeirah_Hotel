@@ -56,7 +56,7 @@ nav .login_button{
 .general_frame{
     position: absolute;
     width: 100%;
-    height: 130%;
+    height: 140%;
     left: 0%;
     top: 0%;
     background: none;
@@ -64,15 +64,15 @@ nav .login_button{
     font-style: normal;
     text-align: center;
     background-color: #FFFFFF;
-    background-image: url(../images/gestionUsuariosFondo.jpg);
+    background-image: url(../images/fondoReservas.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-   
-    
 }
 
+
 h1 {
+    color: white;
     margin: auto;
     padding-top: 1.5%;
     font-size: 1rem;
@@ -101,7 +101,7 @@ label {
 
 .forms_container{
     background-color: rgba(217,217,217,1);
-    height: 80%;
+    height: 85%;
     width: 95%;
     opacity: 95%;
     display: flex;
@@ -133,7 +133,7 @@ label {
     letter-spacing: 0;
     position: absolute;
     left: 40%;
-    top: -2%;
+    top: -1%;
 }
 
 .salir-group{
@@ -148,64 +148,61 @@ label {
     bottom: 1rem;
     right: 2rem;
     justify-content: center;
-    
-
 }
 
 .salir{
     letter-spacing: 0;
 }
 
-.forms {
-    display: flex;
-    flex-direction: row;
-    top: 5%;
-}
-
 .form_registro{
     display: flex;
     background-color: rgb(231, 227, 216);
-    height: 28rem;
+    height: 81%;
     position: absolute;
     top: 10%;
     align-items: center;
-    justify-content: center;
-    left: 5rem;
+    left: 1.5rem;
     flex: none;
+    justify-content: space-between;
     order: 1;
-    width: 40%;
+    width: 45%;
 }
 
-.formRigth {
-    display:flex;
-    flex-direction: column;
-    width: 35%;
+.buscarLabel {
+    position: absolute;
+    left: 5%;
+}
+
+.buscarInput {
+    position: absolute;
+    width: 60%;
+    left: 35%;
+}
+
+.editarLabel {
+    position: absolute;
+    left: 5%;
+}
+
+.editarInput {
+    position: absolute;
+    width: 60%;
+    left: 35%;
 }
 
 .form_title{
     background-color: rgba(49, 49, 49, 1);
     display: flex;
     height: 2rem;
-    top: -2.5rem;
+    top: 0rem;
     color:#FFFFFF;
     font-family: "Kaisei Decol";
     align-self:flex-start;
-    position: relative;
+    position: absolute;
     width: 100%;
     flex: none;
     order:0;
-    padding: 0px;
-    position: absolute;
-    width: 100%;
-    left: 0%;
-    top: 0%;
-}
-
-#registrarTitle {
-    position: absolute;
-    width: 100%;
-    left: 0%;
-    top: 0%;
+    
 }
 
 .form_buscar{
@@ -214,55 +211,46 @@ label {
     height: 10rem;
     position: absolute;
     top: 10%;
-    left: 50%;
-    width: 45%;
+    left: 49%;
+    width: 35rem;
+    justify-self:center;
     align-items: center;
-    justify-content: center;
     flex: none;
     order: 2;
-    
-
-}
-
-.consultaLabel {
-    position: absolute;
-    left: 5%;
-    top: 45%;
-}
-
-.consultaInput {
-    position: absolute;
-    width: 70%;
-    left: 25%;
+    width: 50%;
 }
 
 .form_editar{
     display: flex;
     background-color: rgb(231, 227, 216);
-    height: 17rem;
+    height: 53%;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 45%;
+    top: 38%;
+    width: 35rem;
     flex: none;
     order: 3;
     align-items: center;
-    justify-content: center;
-
+    left: 49%;
+    width: 50%;
 }
 
-.agregar-usuario-group{
+.agregar-habitacion-group{
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: rgba(49, 49, 49, 1);
     border-radius: 70px;
     height: 2rem;
     padding: 10px 27.7px;
-    margin-top: 3rem;
+    width: 15rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 10rem;
+    bottom: 4rem;
 }
 
-.agregar-usuario{
+.agregar-habitacion{
     letter-spacing: 0;
     color: #FFFFFF;
 }
@@ -279,10 +267,8 @@ label {
     align-self: center;
     flex: none;
     position: absolute;
-    left: 10rem;
-    bottom: 0.4rem;
-    
-
+    left: 12rem;
+    bottom: 1rem;
 }
 
 .buscar{
@@ -302,21 +288,8 @@ label {
     align-self: center;
     flex: none;
     position: absolute;
-    left: 5rem;
-    bottom: 0.3rem;
-    
-
-}
-
-.resultadoLabel {
-    position: absolute;
-    left: 5%;
-}
-
-.resultadoInput {
-    position: absolute;
-    width: 70%;
-    left: 25%;
+    left: 7rem;
+    bottom: 1.5rem;
 }
 
 .actualizar{
@@ -336,10 +309,8 @@ label {
     align-self: center;
     flex: none;
     position: absolute;
-    left: 17rem;
-    bottom: 0.3rem;
-    
-
+    left: 19rem;
+    bottom: 1.5rem;
 }
 
 .eliminar{
@@ -354,18 +325,6 @@ label {
     padding: 15px;
 }
 
-.registrarInput {
-    position: absolute;
-    width: 50%;
-    left: 45%;
-
-}
-
-.registrarLabel {
-    position: absolute;
-    left: 5%;
-}
-
 input{
     padding: 0.1rem;
     margin: auto;
@@ -373,7 +332,6 @@ input{
     width: 25rem;
     font-family: "Kaisei Decol";
     align-self: center;
-
 }
 
 select{
@@ -383,7 +341,6 @@ select{
     width: 25rem;
     font-family: "Kaisei Decol";
     align-self: center;
-
 }
 
 a{
@@ -408,8 +365,4 @@ div .eliminar-group:hover{
 }
 div .salir-group:hover{
     background-color: darkred;
-}
-
-div .agregar-usuario-group:hover{
-    background-color: dimgrey;
 }

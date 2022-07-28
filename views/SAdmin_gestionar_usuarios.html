@@ -22,7 +22,7 @@
             <ul>
                 <li><a href="HomePage.html">HomePage</a></li>
                 <li><a href="UserMain.html">Cuartos y Suits</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="formularioContacto.html">Contacto</a></li>
                 <li><a href="SAdmin_gestionar_usuarios.html">Usuarios</a></li>
             </ul>
             <div class="login_button">
@@ -40,10 +40,11 @@
             <div class="forms">
                 <div class="form_registro">
                     <form action="" method="">
-                        <div class="form_title">
+                        <div id="registrarTitle" class="form_title">
                             <h1>Registrar Usuarios</h1>
                         </div>
-                        <div class="input-object"><label for="user_role">Seleccione rol a asignar:</label>
+                        <div class="input-object">
+                            <label class="registrarLabel" for="user_role">Seleccione rol a asignar:</label>
                             <select class="registrarInput" id="user_role" name="user_role" value="Seleccione un rol">
                                 <option value="Huesped">Huesped</option>
                                 <option value="Administrador">Administrador</option>
@@ -51,19 +52,19 @@
                             </select>
                         </div>
                         <div class="input-object">
-                            <label for="user_name">Nombre</label>
+                            <label class="registrarLabel" for="user_name">Nombre</label>
                             <input class="registrarInput" type="text" name="user_name" id="user_name" autocomplete="name">
                         </div>
                         <div class="input-object">
-                            <label for="user_id">Número ID</label>
+                            <label class="registrarLabel" for="user_id">Número ID</label>
                             <input class="registrarInput" type="text" name="user_id" id="user_id" autocomplete="cc-number">
                         </div>
                         <div class="input-object">
-                            <label for="user_email">Email</label>
+                            <label class="registrarLabel" for="user_email">Email</label>
                             <input class="registrarInput" type="email" name="user_email" id="user_email" autocomplete="email">
                         </div>
                         <div class="input-object">
-                            <label for="user_password">Asignar Contraseña</label>
+                            <label class="registrarLabel" for="user_password">Asignar Contraseña</label>
                             <input class="registrarInput" type="password" name="user_password" id="user_password" autocomplete="new-password">
                         </div>
                         <div class="agregar-usuario-group">
@@ -77,8 +78,9 @@
                             <div class="form_title">
                                 <h1>Consulta y Edición de Usuarios</h1>
                             </div>
-                            <div class="input-object"><label for="user_id">Número ID</label>
-                                <input type="text" name="user_id" id="user_id" autocomplete="cc-number">
+                            <div class="input-object">
+                                <label class="consultaLabel" for="user_id">Número ID</label>
+                                <input class="consultaInput" type="text" name="user_id" id="user_id" autocomplete="cc-number">
                             </div>
                             <div class="buscar-group">
                                 <div class="buscar valign-text-middle">Buscar
@@ -91,17 +93,21 @@
                             <div class="form_title">
                                 <h1>Resultado de la búsqueda</h1>
                             </div>
-                            <div class="input-object"><label for="user_name">Nombre</label>
-                                <input type="text" name="user_name" id="user_name" autocomplete="name">
+                            <div class="input-object">
+                                <label class="resultadoLabel" for="user_name">Nombre</label>
+                                <input class="resultadoInput" type="text" name="user_name" id="user_name" autocomplete="name">
                             </div>
-                            <div class="input-object"><label for="user_email">Email</label>
-                                <input type="email" name="user_email" id="user_email" autocomplete="email">
+                            <div class="input-object">
+                                <label class="resultadoLabel" for="user_email">Email</label>
+                                <input class="resultadoInput" type="email" name="user_email" id="user_email" autocomplete="email">
                             </div>
-                            <div class="input-object"><label for="user_password">Contraseña</label>
-                                <input type="password" name="user_password" id="user_password" autocomplete="new-password">
+                            <div class="input-object">
+                                <label class="resultadoLabel" for="user_password">Contraseña</label>
+                                <input class="resultadoInput" type="password" name="user_password" id="user_password" autocomplete="new-password">
                             </div>
-                            <div class="input-object"><label for="user_role">Rol </label>
-                                <select id="user_role" name="user_role" value="Seleccione un rol">
+                            <div class="input-object">
+                                <label class="resultadoLabel" for="user_role">Rol </label>
+                                <select class="resultadoInput" id="user_role" name="user_role" value="Seleccione un rol">
                                     <option value="Huesped">Huesped</option>
                                     <option value="Administrador">Administrador</option>
                                     <option value="Superadministrador">Superadministrador</option>
@@ -117,6 +123,7 @@
                             </div>
 
                         </form>
+                    </div>
                 </div>
             </div>
         </div>

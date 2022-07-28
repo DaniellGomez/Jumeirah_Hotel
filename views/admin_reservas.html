@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Reservas</title>
+    <link rel="stylesheet" type="text/css" href="../css/admin_reservas.css" />
+</head>
+
+<body>
+    <div class="whiteBox">
+
+    </div>
+
+    <head>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo2.webp" alt="logo">
+            </div>
+            <ul>
+                <li><a href="HomePage.html">HomePage</a></li>
+                <li><a href="UserMain.html">Habitacion y Suits</a></li>
+                <li><a href="formularioContacto.html">Contacto</a></li>
+                <li><a href="#">Usuarios</a></li>
+            </ul>
+            <div class="login_button">
+                <a href="#">Login</a>
+            </div>
+        </nav>
+    </head>
+    <div class="general_frame">
+        <div class="forms_container">
+            <div class="container_title"></div>
+            <h1 class="title valign-text-middle">Gestionar Reservas</h1>
+            <div class="salir-group valign-text-middle">
+                <div class="salir"><a href="menu_admin.html">Salir</a></div>
+            </div>
+            <div class="forms">
+                <div class="form_registro">
+                    <form action="" method="">
+                        <div class="form_title">
+                            <h1>Buscar Habitaciones</h1>
+                        </div>
+                        <div class="input-object">
+                            <label class="buscarLabel" for="date_in">Fecha de entrada</label>
+                            <input class="buscarInput" type="date" name="reservation_date_in" id="reservation_date_in">
+                        </div>
+                        <div class="input-object">
+                            <label class="buscarLabel" for="date_out">Fecha de salida</label>
+                            <input class="buscarInput" type="date" name="reservation_date_out" id="reservation_date_out">
+                        </div>
+                        <div class="input-object">
+                            <label class="buscarLabel" for="room_capacity">Capacidad:</label>
+                            <select class="buscarInput" id="room_capacity" name="room_capacity">
+                                <option value="capacidad_todas">Todas</option>
+                                <option value="Individual">Individual</option>
+                                <option value="2_personas">2 personas</option>
+                                <option value="4_personas">4 personas</option>
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label class="buscarLabel" for="room_layout">Acomodación:</label>
+                            <select class="buscarInput" id="room_layout" name="room_layout">
+                                <option value="camas_todas">Todas</option>
+                                <option value="1_cama_sencilla">1 cama sencilla</option>
+                                <option value="1_cama_doble">1 cama doble</option>
+                                <option value="2_camas_dobles">2 camas dobles</option>
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label class="buscarLabel" for="room_bath">Baño:</label>
+                            <select class="buscarInput" id="room_bath" name="room_bath">
+                                <option value="bano_todos">Todos</option>
+                                <option value="bano_estandar">Baño Estándar</option>
+                                <option value="bano_jacuzzi">Baño con Jacuzzi</option>
+                                <option value="bano_doble_jacuzzi">Baño doble con Jacuzzi</option>
+                            </select>
+                        </div>
+                        <div class="agregar-habitacion-group">
+                            <div class="agregar-habitacion valign-text-middle">
+                                <a href="#">Buscar Disponibles</a> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form_buscar">
+                    <form action="" method="">
+                        <div class="form_title">
+                            <h1>Consulta y Edición de Reservas</h1>
+                        </div>
+                        <div class="input-object"><label for="room_number">Código de Reserva</label>
+                            <input type="text" name="room_number" id="room_number">
+                        </div>
+                        <div class="buscar-group">
+                            <div class="buscar valign-text-middle"><a href="#">Buscar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form_editar">
+                    <form action="" method="">
+                        <div class="form_title">
+                            <h1>Resultado de la búsqueda</h1>
+                        </div>
+                        <div class="input-object">
+                            <label class="editarLabel" for="user_name">Usuario:</label>
+                            <input class="editarInput" type="text" name="user_name" id="user_name">
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label class="editarLabel" for="room_number">Número de Habitación:</label>
+                            <input class="editarInput" type="text" name="room_number" id="room_number">
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label class="editarLabel" for="date_in">Fecha de entrada</label>
+                            <input class="editarInput" type="date" name="reservation_date_in" id="reservation_date_in">
+                        </div>
+                        <div class="input-object">
+                            <label class="editarLabel" for="date_out">Fecha de salida</label>
+                            <input class="editarInput" type="date" name="reservation_date_out" id="reservation_date_out">
+                        </div>
+                        
+                        <div class="actualizar-group">
+                            <div class="actualizar valign-text-middle"><a href="#">Actualizar</a>
+                            </div>
+                        </div>
+                        <div class="eliminar-group">
+                            <div class="eliminar valign-text-middle"><a href="#">Eliminar</a>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
