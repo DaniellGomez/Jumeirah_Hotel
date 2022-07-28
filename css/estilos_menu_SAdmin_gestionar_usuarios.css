@@ -164,7 +164,7 @@ label {
     left: 1.5rem;
     flex: none;
     order: 1;
-    width: 40rem;
+    width: 35rem;
 
 }
 
@@ -191,8 +191,8 @@ label {
     top: 5rem;
     right: 7rem;
     width: 30rem;
-    justify-self:center;
     align-items: center;
+    justify-content: center;
     flex: none;
     order: 2;
     
@@ -210,6 +210,7 @@ label {
     flex: none;
     order: 3;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -302,6 +303,7 @@ label {
    
     display: flex;
     flex-direction: column;
+    
 }
 
 input{
@@ -346,4 +348,8 @@ div .eliminar-group:hover{
 }
 div .salir-group:hover{
     background-color: darkred;
+}
+
+div .agregar-usuario-group:hover{
+    background-color: dimgrey;
 }
