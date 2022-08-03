@@ -197,3 +197,7 @@ div .opcion2:hover{
 div .opcionsalir:hover{
     background-color: darkred;
 }
+
+.buttonText {
+    font-size: x-large;
+}

@@ -1,41 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "navbar.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestionar Usuarios</title>
-    <link rel="stylesheet" type="text/css" href="../css/estilos_menu_SAdmin_gestionar_usuarios.css" />
-</head>
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/usuariosSAdmin.css')}}">
+{% endblock %}
 
-<body>
+{% block principal %}
     <div class="whiteBox">
 
     </div>
-
-    <head>
-        <nav>
-            <div class="logo">
-                <img src="../images/logo2.webp" alt="logo">
-            </div>
-            <ul>
-                <li><a href="HomePage.html">HomePage</a></li>
-                <li><a href="UserMain.html">Cuartos y Suits</a></li>
-                <li><a href="formularioContacto.html">Contacto</a></li>
-                <li><a href="SAdmin_gestionar_usuarios.html">Usuarios</a></li>
-            </ul>
-            <div class="login_button">
-                <a href="inicioSesion.html">Login</a>
-            </div>
-        </nav>
-    </head>
+    
     <div class="general_frame">
         <div class="forms_container">
             <div class="container_title"></div>
             <h1 class="title valign-text-middle">Gestionar Usuarios</h1>
             <div class="salir-group valign-text-middle">
-                <div class="salir"><a href="./menu_SAdmin.html">Salir</a></div>
+                <div class="salir"><a href="menuSuperAdmin()">Salir</a></div>
             </div>
             <div class="forms">
                 <div class="form_registro">
@@ -44,7 +23,7 @@
                             <h1>Registrar Usuarios</h1>
                         </div>
                         <div class="input-object">
-                            <label class="registrarLabel" for="user_role">Seleccione rol a asignar:</label>
+                            <label class="registrarLabel" for="user_role">Seleccione un rol</label>
                             <select class="registrarInput" id="user_role" name="user_role" value="Seleccione un rol">
                                 <option value="Huesped">Huesped</option>
                                 <option value="Administrador">Administrador</option>
@@ -130,6 +109,4 @@
 
 
     </div>
-</body>
-
-</html>
+{% endblock %}

@@ -1,77 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+:root{
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
+}
+
 * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
 }
 
-#bodyInicio {
-    background-image: url(../images/fondoInicio.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-nav{
-    background-color: #323232;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 4rem;
-    font-family: var(font-title);
-    position: fixed;
-    z-index: 100;
-}
-
-nav .logo{
-    height: 3rem;
-    margin-left: 2rem;
-}
-
-nav .logo img{
-    height: 100%;
-}
-
-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    font-size:1.2rem;
-}
-
-nav ul li,a{
-    color: #FFFFFF;
-    margin: 0px 1rem 0px 1rem;
-    text-decoration: none;
-}
-
-nav ul li:nth-child(4){
-    display: none;
-}
-
-nav .login_button{
-    margin-right: 2rem;
-    border: 2px solid #FFFFFF;
-    border-radius: 5px;
-    padding: .3rem;
-}
-
-#titleInicio {
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    left: 0px;
-    top: 17.7%;
-    color: white;
-    background: #323232;
-    font-family: 'Kaisei Decol';
-    font-style: normal;
-    text-align: center;
-}
-
 h1 {
     margin: auto;
     padding-top: 1.5%;
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
 }
 
 #form {
@@ -87,6 +33,7 @@ h1 {
     font-family: 'Hind';
     font-style: normal;
     line-height: 25px;
+    z-index: 2;
 }
 
 select {
@@ -133,13 +80,8 @@ label {
     left: 130px;
     top: 35%;
     background: #FFFFFF;
-    border-radius: 20px; 
-}
-
-#bodyRegistro {
-    background-image: url(../images/fondoRegistro.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    border-radius: 20px;
+    z-index: 1; 
 }
 
 #titleRegistro {
@@ -158,6 +100,7 @@ label {
 #h1Registro {
     margin: auto;
     padding-top: 0.7%;
+    font-size: x-large;
 }
 
 .inputRegistro {
@@ -167,7 +110,6 @@ label {
 #buttonRegistro {
     width: 50%;
     margin: auto;
-    font-size: 25px;
 }
 
 #buttonsRegistro {
@@ -175,10 +117,18 @@ label {
     flex-direction: column;
     padding: 25px;
     font-family: 'Hind';
-    font-style: normal;
     width: 55%;
     position: absolute;
-    top: 140%;
+    top: 120%;
+    left: 25%;
+}
+
+#buttonText {
+    position: relative;
+    top: -5px;
+    font-size: x-large;
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
 }
 
 #flexForm {
@@ -188,6 +138,8 @@ label {
 
 #formLabels {
     padding: 10px;
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
 }
 
 #formInputs {

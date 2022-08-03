@@ -1,37 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "navbar.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="../css/registro.css" type="text/css" />
-    <meta
-        description="Página de registro de huespedes del sistema de gestión de reservas del hotel Jumeirah Emirates Towers." />
-</head>
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/registroHuesped.css')}}">
+{% endblock %}
 
-<body id="bodyRegistro">
+{% block principal %}
+    <style type="text/css">
+        body {
+            background-image: url("/static/images/fondoRegistro.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+
     <div class="whiteBox">
 
     </div>
-    
-    <head>
-        <nav>
-            <div class="logo">
-                <img src="../images/jhrlogo2019white.webp" alt="logo">
-            </div>
-            <ul>
-                <li><a href="HomePage.html">HomePage</a></li>
-                <li><a href="UserMain.html">Cuartos y Suits</a></li>
-                <li><a href="formularioContacto.html">Contacto</a></li>
-                <li><a href="#">Usuarios</a></li>
-            </ul>
-            <div class="login_button">
-                <a href="inicioSesion.html">Login</a>
-            </div>
-        </nav>
-    </head>
 
     <div id="titleRegistro">
         <h1 id="h1Registro">Registro de Huespedes</h1>
@@ -65,10 +49,8 @@
             </div>
         </form>
         <div id="buttonsRegistro">
-            <button href="UserMain.html" id="buttonRegistro" class="button" value="Completar registro"><a href="UserMain.html">Completar registro</a></button>
+            <button href="UserMain.html" id="buttonRegistro" class="button" value="Completar registro"><a id="buttonText" href="UserMain.html">Completar registro</a></button>
         </div>
 
     </div>
-</body>
-
-</html>
+{% endblock %}

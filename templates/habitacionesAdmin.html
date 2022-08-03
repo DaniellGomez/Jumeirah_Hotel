@@ -1,35 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "navbar.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestionar Habitaciones</title>
-    <link rel="stylesheet" type="text/css" href="../css/estilos_menu_SAdmin_gestionar_habitaciones.css" />
-</head>
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/habitacionesAdmin.css')}}">
+{% endblock %}
 
-<body>
+{% block principal %}
     <div class="whiteBox">
 
     </div>
 
-    <head>
-        <nav>
-            <div class="logo">
-                <img src="../images/logo2.webp" alt="logo">
-            </div>
-            <ul>
-                <li><a href="HomePage.html">HomePage</a></li>
-                <li><a href="UserMain.html">Cuartos y Suits</a></li>
-                <li><a href="formularioContacto.html">Contacto</a></li>
-                <li><a href="SAdmin_gestionar_usuarios.html">Usuarios</a></li>
-            </ul>
-            <div class="login_button">
-                <a href="inicioSesion.html">Login</a>
-            </div>
-        </nav>
-    </head>
     <div class="general_frame">
         <div class="forms_container">
             <div class="container_title"></div>
@@ -45,7 +24,7 @@
                             <h1>Agregar Habitaciones</h1>
                         </div>
                         <div class="input-object">
-                            <label for="user_name">Número de Habitación</label>
+                            <label for="user_name">N° Habitación</label>
                             <input class="agregarInput" type="text" name="room_number" id="room_number">
                         </div>
                         <div class="input-object">
@@ -142,6 +121,4 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>
+{% endblock %}

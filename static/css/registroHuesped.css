@@ -4,76 +4,16 @@
     box-sizing: border-box;
 }
 
-/*Estilos para la página de inicio de sesión*/
-
-#bodyInicio {
-    background-image: url(../images/fondoInicio.jpg);
+body {
+    background-image: url(../images/fondoRegistro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-nav{
-    background-color: #323232;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 4rem;
-    font-family: var(font-title);
-    position: fixed;
-    z-index: 100;
-}
-
-nav .logo{
-    height: 3rem;
-    margin-left: 2rem;
-}
-
-nav .logo img{
-    height: 100%;
-}
-
-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    font-size:1.2rem;
-}
-
-nav ul li,a{
-    color: #FFFFFF;
-    margin: 0px 1rem 0px 1rem;
-    text-decoration: none;
-}
-
-nav ul li:nth-child(4){
-    display: none;
-}
-
-nav .login_button{
-    margin-right: 2rem;
-    border: 2px solid #FFFFFF;
-    border-radius: 5px;
-    padding: .3rem;
-}
-
-#titleInicio {
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    left: 0px;
-    top: 17.7%;
-    color: white;
-    background: #323232;
-    font-family: 'Kaisei Decol';
-    font-style: normal;
-    text-align: center;
 }
 
 h1 {
     margin: auto;
     padding-top: 1.5%;
+    font-size: x-large;
 }
 
 #form {
@@ -85,17 +25,10 @@ h1 {
     position: absolute;
     width: 100%;
     height: 22%;
-    top: 50%;
+    top: 40%;
     font-family: 'Hind';
     font-style: normal;
     line-height: 25px;
-}
-
-select {
-    font-family: 'Hind';
-    font-style: normal;
-    background-color:#AAA;
-    width: 400px;
 }
 
 input {
@@ -117,7 +50,6 @@ label {
     font-family: 'Hind';
     font-style: normal;
     font-size: 12px;
-    width: 50%;
 }
 
 .button {
@@ -126,7 +58,13 @@ label {
     background-color: #323232;
     color: white;
     border-radius: 10px;
-    width: 65%;
+    width: 50%;
+}
+
+#buttonText {
+    position: relative;
+    top: -3px;
+    font-size: x-large;
 }
 
 .whiteBox {
@@ -134,17 +72,9 @@ label {
     width: 76.4%;
     height: 50%;
     left: 130px;
-    top: 45%;
+    top: 35%;
     background: #FFFFFF;
     border-radius: 20px; 
-}
-
-/*Estilos para la página de Registro*/
-
-#bodyRegistro {
-    background-image: url(../images/fondoRegistro.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #titleRegistro {
@@ -172,6 +102,7 @@ label {
 #buttonRegistro {
     width: 50%;
     margin: auto;
+    font-size: 25px;
 }
 
 #buttonsRegistro {
@@ -195,3 +126,4 @@ label {
 #formInputs {
     padding: 10px;
 }
+

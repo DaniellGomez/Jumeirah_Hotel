@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/HomePage.css">
-    <title>HomePage</title>
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <img src="../images/jhrlogo2019white.webp" alt="logo">
-        </div>
-        <ul>
-            <li><a href="HomePage.html">Home Page</a></li>
-            <li><a href="UserMain.html">Cuartos y Suits</a></li>
-            <li><a href="formularioContacto.html">Contacto</a></li>
-            <li><a href="#">Usuarios</a></li>
-        </ul>
-        <div class="login_button">
-            <a href="inicioSesion.html">Login</a>
-        </div>
-    </nav>
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homepage.css')}}">
+{% endblock %}
+
+{% block principal %}
     <main>
         <div class="offert">
             <div class="offert_info">
@@ -47,7 +30,8 @@
                 </div>
             </div>
             <div class="offert_image">
-                <img src="../images/offert_homePage.png" alt="">
+                <!-- <img src="../images/offert_homePage.png" alt=""> -->
+                <img src="{{ offert }}" alt="">
             </div>
         </div>
         <section>
@@ -56,26 +40,25 @@
                 <div class="card">
                     <h2>Comida Al Cuarto</h2>
                     <div class="card_image">
-                        <img src="../images/ComidaAlCuarto.png" alt="">
+                        <!-- <img src="../images/ComidaAlCuarto.png" alt=""> -->
+                        <img src="{{ comida }}" alt="">
                     </div>
                 </div>
                 <div class="card">
                     <h2>Sauna</h2>
                     <div class="card_image">
-                        <img src="../images/Sauna.png" alt="">
+                        <!-- <img src="../images/Sauna.png" alt=""> -->
+                        <img src="{{ sauna }}" alt="">
                     </div>
                 </div>
                 <div class="card">
                     <h2>Gimnasio</h2>
                     <div class="card_image">
-                        <img src="../images/GYM.png" alt="">
+                        <!--- <img src="../images/GYM.png" alt=""> -->
+                        <img src="{{ gym }}" alt="">
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
-</body>
-</html>
+{% endblock %}

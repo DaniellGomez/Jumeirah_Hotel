@@ -1,0 +1,42 @@
+{%  extends "navbar.html" %}
+    
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/inicioSesion.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <div class="whiteBox">
+                
+    </div>
+
+    <section id="bodyInicio">
+        <div id="titleInicio">
+            <h1>Jumeriah Emirates Towers <br/> Sistema de gestión de reservaciones</h1>
+        </div>
+
+        <div id="form" name="form">
+            <form action="" method="">
+                <select id="userRol" name="userRol">
+                    <option value="selectRol">Seleccione su rol</option>
+                    <option value="huesped">Huesped</option>
+                    <option value="admin">Administrador</option>
+                    <option value="superadmin">Superadministrador</option>
+                </select>
+                <br/>
+                <label>Email</label> 
+                <br/>
+                <input type="text" id="emailUser" name="emailUser" autocomplete="email"/>
+                <br/>
+                <label>Contraseña</label> 
+                <br/>
+                <input type="password" id="passwordUser" name="passwordUser" autocomplete="password"/>
+                <br/>
+            </form>
+            <div id="buttons">
+                <input type="button" class="button" onclick="iniciarSesion()" value="Iniciar sesión"/>
+                <input type="button" class="button" onclick="registro()" value="Registro"/>
+            </div>
+            
+        </div>
+    </section>
+{% endblock %}
