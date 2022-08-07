@@ -53,7 +53,6 @@ input {
 label {
     font-family: 'Hind';
     font-style: normal;
-    padding-right: 10px;
 }
 
 #buttons {
@@ -67,7 +66,7 @@ label {
 
 .button {
     margin: 25px;
-    font-size: x-large;
+    font-size: 2em;
     background-color: #323232;
     color: white;
     border-radius: 10px;
@@ -77,7 +76,7 @@ label {
 .whiteBox {
     position: absolute;
     width: 76.4%;
-    height: 50%;
+    height: 60%;
     left: 130px;
     top: 35%;
     background: #FFFFFF;
@@ -111,7 +110,6 @@ label {
 #buttonRegistro {
     width: 50%;
     margin: auto;
-    z-index: 2;
 }
 
 #buttonsRegistro {
@@ -121,7 +119,7 @@ label {
     font-family: 'Hind';
     width: 55%;
     position: absolute;
-    top: 130%;
+    top: 170%;
     left: 25%;
 }
 
@@ -138,20 +136,32 @@ label {
     flex-direction: row;
 }
 
-.formLabels {
+#formLabels {
     padding: 10px;
     font-title: 'Baskervville', serif;
     font-text:'Baskervville', serif;
 }
 
-.formInputs {
+#formInputs {
     padding: 10px;
 }
 
 #comentarioField {
     height: 70%;
-    width: 100%;
     position: relative;
     top: 3%;
-    background-color: #AAA;
+}
+
+.radioOption {
+    padding: 5px;
+    width: 15px;
+}
+
+#buscarButton {
+    color: white;
+    background-color: #323232;
+    position: relative;
+    left: 5%;
+    padding: 5px;
+    border-radius: 20px;
 }

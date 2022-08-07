@@ -22,35 +22,42 @@
     </div>
 
     <div id="form">
-        <form action="" method="">
+        <form action="" method="POST">
+            {{form.hidden_tag()}}
             <div id="flexForm">
                 <div id="formLabels">
-                    <label>Nombre</label>
+                    {{form.nombre.label}}
                     <br/>
-                    <label>Número ID.</label>
+                    {{form.numeroId.label}}
                     <br/>
-                    <label>Email</label>
+                    {{form.email.label}}
                     <br/>
-                    <label>Contraseña</label>
+                    {{form.password.label}}
                     <br/>
-                    <label>Confirmar Contraseña</label>
+                    {{form.confirmarPassword.label}}
                 </div>
                 <div id="formInputs">
-                <input class="inputRegistro" type="text" name="emailUser" autocomplete="email"/>
+                <!-- <input class="inputRegistro" type="text" name="emailUser" autocomplete="email"/> -->
+                {{form.nombre(class_="inputRegistro")}}
                 <br />
-                <input class="inputRegistro" type="text" name="idUser" autocomplete="id"/>
+                <!-- <input class="inputRegistro" type="text" name="idUser" autocomplete="id"/> -->
+                {{form.numeroId(class_="inputRegistro")}}
                 <br />
-                <input class="inputRegistro" type="email" name="emailUser" autocomplete="email"/>
+                <!-- <input class="inputRegistro" type="email" name="emailUser" autocomplete="email"/> -->
+                {{form.email(class_="inputRegistro")}}
                 <br />
-                <input class="inputRegistro" type="password" name="passwordUser" autocomplete="password">
+                <!-- <input class="inputRegistro" type="password" name="passwordUser" autocomplete="password"> -->
+                {{form.password(class_="inputRegistro")}}
                 <br />
-                <input class="inputRegistro" type="password" name="passwordUser" autocomplete="password">
-                </div>
+                <!-- <input class="inputRegistro" type="password" name="passwordUser" autocomplete="password"> -->
+                {{form.confirmarPassword(class_="inputRegistro")}}
+            </div>
+            </div>
+
+            <div id="buttonsRegistro">
+                <!-- <button href="UserMain.html" id="buttonRegistro" class="button" value="Completar registro"><a id="buttonText" href="UserMain.html">Completar registro</a></button> -->
+                {{form.enviar(class_="button")}}
             </div>
         </form>
-        <div id="buttonsRegistro">
-            <button href="UserMain.html" id="buttonRegistro" class="button" value="Completar registro"><a id="buttonText" href="UserMain.html">Completar registro</a></button>
-        </div>
-
     </div>
 {% endblock %}

@@ -23,7 +23,7 @@ body{
 
 .container{
     width: 100%;
-    height: calc(100vh - 4rem);
+    height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,12 @@ body{
     letter-spacing: 1px;
     font-size: 2.5rem;
     font-family: var(font-title);
-    top: 40px;
+    top: 65px;
+}
+
+#doble {
+    position: absolute;
+    top: -10%;
 }
 
 .filters{
@@ -47,6 +52,9 @@ body{
     justify-content: center;
     gap: 200px;
     margin: 3rem 0 3rem 0;
+    top: 20%;
+    z-index: 2;
+    padding: 20px;
 }
 .room_finded{
     width: 1280px;
@@ -57,6 +65,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 .room_finded h2{
     width: 100%;
@@ -78,6 +87,8 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+
 .room_actions{
     position: relative;
     width: 100%;
@@ -88,7 +99,6 @@ body{
 }
 
 .room_actions .room_button{
-    border: 1px solid #323232;
     border-radius: 5px;
     padding: .2rem;
     margin: 0px 1rem;
@@ -97,4 +107,23 @@ body{
     color: #323232;
     font-family: var(font-text);
     font-size: 1rem;
+} 
+
+.buscarGroup {
+    position: relative;
+    left: 30%;
+    top: -5%;
+}
+
+.buttons {
+    background-color: #323232;
+    color: white;
+    border-color: #323232;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px; 
+}
+
+.image {
+    padding-left: 60px;
 }

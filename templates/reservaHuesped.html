@@ -9,18 +9,16 @@
         <h1>Habitacion Estandar</h1>
         <div class="filters">
             <div class="input_selector">
-                <input type="date" name="fecha" id="fecha">
+                {{form.fechaInicio.label}}
+                {{form.fechaInicio(size = 15)}}
             </div>
             <div class="input_selector">
-                <select name="capacidad" id="capacidad">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                </select>
+                {{form.dias.label}}
+                {{form.dias(size = 4)}}
             </div>
         </div>
         <div class="room_finded">
-            <h2>Cuarto Doble</h2>
+            <h2 id="doble">Cuarto Doble</h2>
             <div class="room_content">
                 <div class="image">
                     <!-- <img src="../images/Habitacion_Estandar.png" alt="Image"> -->
@@ -49,16 +47,21 @@
                     </div>
                 </div>
             </div>
+            <div class="buscarGroup">
+                {{form.reservaId.label}}
+                {{form.reservaId(size = 10)}}
+                {{form.buscar(class_="buttons")}}
+            </div>
             <div class="room_actions">
 
                 <div class="room_button">
-                    <a href="#">Eliminar</a>
+                    {{form.eliminar(class_="buttons")}}
                 </div>
                 <div class="room_button">
-                    <a href="#">Editar</a>
+                    {{form.editar(class_="buttons")}}
                 </div>
                 <div class="room_button">
-                    <a href="#">Reservar</a>
+                    {{form.reserva(class_="buttons")}}
                 </div>
 
             </div>

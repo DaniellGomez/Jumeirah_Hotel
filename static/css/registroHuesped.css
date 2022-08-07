@@ -50,6 +50,7 @@ label {
     font-family: 'Hind';
     font-style: normal;
     font-size: 12px;
+    width: 100%;
 }
 
 .button {
@@ -59,6 +60,8 @@ label {
     color: white;
     border-radius: 10px;
     width: 50%;
+    position: relative;
+    left: 50%;
 }
 
 #buttonText {
@@ -100,7 +103,7 @@ label {
 }
 
 #buttonRegistro {
-    width: 50%;
+    width: 80%;
     margin: auto;
     font-size: 25px;
 }
