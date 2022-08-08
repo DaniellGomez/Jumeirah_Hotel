@@ -14,7 +14,7 @@
 
     </div>
 
-    <head>
+    <header>
         <nav>
             <div class="logo">
                 <img src="../images/logo2.webp" alt="logo">
@@ -29,20 +29,18 @@
                 <a href="#">Login</a>
             </div>
         </nav>
-    </head>
+    </header>
     <div class="general_frame">
         <div class="forms_container">
-            <div class="container_title"></div>
-            <h1 class="title valign-text-middle">Gestionar Usuarios</h1>
-            <div class="salir-group valign-text-middle">
-                <div class="salir"><a href="#">Salir</a></div>
+            <div class="container_title">
+                <h1>Gestionar Usuarios</h1>
             </div>
             <div class="forms">
                 <div class="form_registro">
+                    <div class="form_title">
+                        <h1>Registrar Usuarios</h1>
+                    </div>
                     <form action="" method="">
-                        <div class="form_title">
-                            <h1>Registrar Usuarios</h1>
-                        </div>
                         <div class="input-object"><label for="user_role">Seleccione rol a asignar:</label>
                             <select id="user_role" name="user_role" value="Seleccione un rol">
                                 <option value="Huesped">Huesped</option>
@@ -72,24 +70,23 @@
                     </form>
                 </div>
                 <div class="form_buscar">
+                    <div class="form_title">
+                        <h1>Consulta y Edición de Usuarios</h1>
+                    </div>
                     <form action="" method="">
-                        <div class="form_title">
-                            <h1>Consulta y Edición de Usuarios</h1>
-                        </div>
                         <div class="input-object"><label for="user_id">Número ID</label>
                             <input type="text" name="user_id" id="user_id" autocomplete="cc-number">
                         </div>
                         <div class="buscar-group">
-                            <div class="buscar valign-text-middle">Buscar
-                            </div>
+                            <div class="buscar valign-text-middle">Buscar</div>
                         </div>
                     </form>
                 </div>
                 <div class="form_editar">
+                    <div class="form_title">
+                        <h1>Resultado de la búsqueda</h1>
+                    </div>
                     <form action="" method="">
-                        <div class="form_title">
-                            <h1>Resultado de la búsqueda</h1>
-                        </div>
                         <div class="input-object"><label for="user_name">Nombre</label>
                             <input type="text" name="user_name" id="user_name" autocomplete="name">
                         </div>
@@ -106,6 +103,10 @@
                                 <option value="Superadministrador">Superadministrador</option>
                             </select>
                         </div>
+                        <div class="buttons_actions">
+                            <a href="">Actualizar</a>
+                            <a href="">Eliminar</a>
+                        </div><!-- 
                         <div class="actualizar-group">
                             <div class="actualizar valign-text-middle">Actualizar
                             </div>
@@ -113,13 +114,12 @@
                         <div class="eliminar-group">
                             <div class="eliminar valign-text-middle">Eliminar
                             </div>
-                        </div>
-
+                        </div> -->
                     </form>
                 </div>
-
-
-
+            </div>
+            <div class="salir-group valign-text-middle">
+                <a href="#">Salir</a>
             </div>
         </div>
 

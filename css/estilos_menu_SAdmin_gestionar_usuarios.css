@@ -15,7 +15,7 @@ nav{
     width: 100%;
     height: 4rem;
     font-family: var(font-title);
-    position: fixed;
+    position: relative  ;
     z-index: 100;
 }
 
@@ -54,11 +54,10 @@ nav .login_button{
 }
 
 .general_frame{
-    position: absolute;
+    display: grid;
+    place-items: center;  
+    position: relative;
     width: 100%;
-    height: 130%;
-    left: 0%;
-    top: 0%;
     background: none;
     font-family: 'Kaisei Decol';
     font-style: normal;
@@ -74,7 +73,6 @@ nav .login_button{
 
 h1 {
     margin: auto;
-    padding-top: 1.5%;
     font-size: 1rem;
 }
 
@@ -98,77 +96,58 @@ label {
     font-style: normal;
 }
 
-
 .forms_container{
     background-color: rgba(217,217,217,1);
-    height: 70%;
     width: 95%;
     opacity: 95%;
-    display: flex;
-    position: absolute;
-    left: 2rem;
-    top: 6rem;
-    align-content: space-between;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    height: calc(100vh - 4rem);
+    position: relative;
 }
 
 .container_title{
     background-color: rgb(231, 227, 216);
     width: 100%;
-    height:8%;
-    flex: none;
-    order: 0;
-    
+    border: 1px solid red;
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
 }
 
-.title{
+.container_title h1{
     color: black;
     font-family: "Kaisei Decol";
-    font-size: 1.5rem;
     font-weight: 400;
-    letter-spacing: 0;
-    position: absolute;
-    left: 2rem;
-    top: -0.5rem;
+    font-size: 1.5rem;
+    border: 1px solid red;
 }
 
-.salir-group{
-    display: flex;
-    align-items: center;
-    background-color: #755b5b;
-    border-radius: 70px;
-    height: 2rem;
-    position: absolute;
-    padding: 10px 27.7px;
-    width: 2rem;
-    bottom: 1rem;
-    right: 2rem;
-    justify-content: center;
-    
-
-}
-
-.salir{
-    letter-spacing: 0;
+.forms{
+    border: 1px solid red;
+    display: grid;
+    grid-template-areas:
+    'registro buscar'
+    'registro editareliminar'
+    'registro editareliminar';
+    grid-gap: 50px;
+    place-items: center;
+    height: auto;
+    margin-top: 3rem;
 }
 
 .form_registro{
-    display: flex;
+    border: 1px solid red;
+    grid-area: registro;
     background-color: rgb(231, 227, 216);
-    height: 28rem;
-    position: absolute;
-    top: 5rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    left: 1.5rem;
-    flex: none;
-    order: 1;
-    width: 40rem;
 
 }
 
 .form_title{
+    border: 1px solid red;
     background-color: rgba(49, 49, 49, 1);
     display: flex;
     height: 2rem;
@@ -184,33 +163,22 @@ label {
 }
 
 .form_buscar{
+    border: 1px solid red;
+    grid-area: buscar;
     display: flex;
-    background-color: rgb(231, 227, 216);
-    height: 10rem;
-    position: absolute;
-    top: 5rem;
-    right: 3rem;
-    width: 35rem;
+    flex-direction: column;
     justify-self:center;
     align-items: center;
-    flex: none;
-    order: 2;
-    
-
+    background-color: rgb(231, 227, 216);
+    width: 35rem;
 }
 
 .form_editar{
-    display: flex;
+    border: 1px solid red;
+    grid-area: editareliminar ;
     background-color: rgb(231, 227, 216);
-    height: 17rem;
-    position: absolute;
-    top: 16rem;
-    right: 3rem;
+    height: 15rem;
     width: 35rem;
-    flex: none;
-    order: 3;
-    align-items: center;
-
 }
 
 .agregar-usuario-group{
@@ -240,11 +208,6 @@ label {
     justify-content: center;
     align-self: center;
     flex: none;
-    position: absolute;
-    left: 12rem;
-    bottom: 1rem;
-    
-
 }
 
 .buscar{
@@ -263,9 +226,9 @@ label {
     justify-content: center;
     align-self: center;
     flex: none;
-    position: absolute;
+   /*  position: absolute;
     left: 7rem;
-    bottom: 1.5rem;
+    bottom: 1.5rem; */
     
 
 }
@@ -286,9 +249,9 @@ label {
     justify-content: center;
     align-self: center;
     flex: none;
-    position: absolute;
+    /* position: absolute;
     left: 19rem;
-    bottom: 1.5rem;
+    bottom: 1.5rem; */
     
 
 }
@@ -302,6 +265,22 @@ label {
    
     display: flex;
     flex-direction: column;
+}
+.salir-group{
+    display: flex;
+    align-items: center;
+    background-color: #755b5b;
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 2rem;
+    justify-content: center;
+    
+
+}
+
+.salir{
+    letter-spacing: 0;
 }
 
 input{
