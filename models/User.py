@@ -5,11 +5,13 @@ class User(Person):
     def __init__(self):
         self._bookings = int
         self._record = []
+        self._typeUser = "USER"
     
-    def __init__(self, id, name, lastName, phone, email, password, record, bookings):
+    def __init__(self, id, name, lastName, phone, email, password, record, bookings, typeUser):
         super().__init__(id, name, lastName, phone, email, password)
         self._record = record
         self._bookings = bookings
+        self._typeUser = typeUser
 
     #Getters
 
@@ -32,3 +34,8 @@ class User(Person):
         else:
             self._record = record
     
+    def set_typeUser(self, typeUser):
+        if(self._typeUser == typeUser):
+            return True
+        else:
+            return False
