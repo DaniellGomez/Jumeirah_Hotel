@@ -1,4 +1,4 @@
-import Person
+from Person import Person
 
 class User(Person):
 
@@ -11,7 +11,7 @@ class User(Person):
         super().__init__(id, name, lastName, phone, email, password)
         self._record = record
         self._bookings = bookings
-        self._typeUser = typeUser
+        self._typeUser = typeUser.upper()
 
     #Getters
 
@@ -20,6 +20,9 @@ class User(Person):
     
     def get_record(self):
         return self._record
+    
+    def get_type_user(self):
+        return self._typeUser
 
     #Setters
     def set_bookings(self, bookings):
@@ -35,7 +38,7 @@ class User(Person):
             self._record = record
     
     def set_typeUser(self, typeUser):
-        if(self._typeUser == typeUser):
+        if(self._typeUser == typeUser.upper()):
             return True
         else:
             return False
