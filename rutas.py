@@ -61,12 +61,30 @@ def menuSuperAdmin():
 
 @app.route('/gestionhabitaciones', methods=['GET', 'POST'])
 def habitacionesSuperAdmin():
-    formulario = FormHabitaciones()
-    return render_template("habitacionesSAdmin.html", titulo = "Gestión Habitaciones", logo_img = logo_path)
+    formulario1 = AgregarHabitaciones()
+    formulario2 = BuscarHabitaciones()
+    formulario3 = GestionHabitaciones()
+    return render_template("habitacionesSAdmin.html", 
+    form1 = formulario1, 
+    form2 = formulario2, 
+    form3 = formulario3, 
+    data1 = [{'capacidad': 'Individual'}, {'capacidad': '2 personas'}, {'capacidad': '4 personas'}], 
+    data2 = [{'acomodacion': '1 cama sencilla'}, {'acomodacion': '1 cama doble'}, {'acomodacion': '2 camas dobles'}], 
+    data3 = [{'baño': 'Baño estándar'}, {'baño': 'Baño con Jacuzzi'}], 
+    titulo = "Gestión Habitaciones", 
+    logo_img = logo_path)
 
 @app.route('/gestionusuarios')
 def usuariosSuperAdmin():
-    return render_template("usuariosSAdmin.html", titulo = "Gestión Usuarios", logo_img = logo_path)
+    formulario1 = RegistrarUsuario()
+    formulario2 = BuscarUsuario()
+    formulario3 = GestionUsuario()
+    return render_template("usuariosSAdmin.html", 
+    form1 = formulario1,
+    form2 = formulario2,
+    form3 = formulario3,
+    data = [{'rol': 'Huesped'}, {'rol': 'Administrador'}, {'rol': 'Superadministrador'}],
+    titulo = "Gestión Usuarios", logo_img = logo_path)
 
 @app.route('/menuadmin')
 def menuAdmin():
@@ -74,15 +92,42 @@ def menuAdmin():
 
 @app.route('/reservasadmin')
 def reservasAdmin():
-    return render_template("reservasAdmin.html", titulo = "Gestión Reservas", logo_img = logo_path)
+    formulario1 = ReservasDisponibles()
+    formulario2 = BuscarReserva()
+    formulario3 = GestionReserva()
+    return render_template("reservasAdmin.html", 
+    form1 = formulario1,
+    form2 = formulario2,
+    form3 = formulario3,
+    data1 = [{'capacidad': 'Individual'}, {'capacidad': '2 personas'}, {'capacidad': '4 personas'}], 
+    data2 = [{'acomodacion': '1 cama sencilla'}, {'acomodacion': '1 cama doble'}, {'acomodacion': '2 camas dobles'}], 
+    data3 = [{'baño': 'Baño estándar'}, {'baño': 'Baño con Jacuzzi'}],
+    titulo = "Gestión Reservas", 
+    logo_img = logo_path)
 
 @app.route('/habitacionesadmin')
 def habitacionesAdmin():
-    return render_template("habitacionesAdmin.html", titulo = "Gestión Habitaciones", logo_img = logo_path)
+    formulario1 = AgregarHabitaciones()
+    formulario2 = BuscarHabitaciones()
+    formulario3 = GestionHabitaciones()
+    return render_template("habitacionesSAdmin.html", 
+    form1 = formulario1, 
+    form2 = formulario2, 
+    form3 = formulario3, 
+    data1 = [{'capacidad': 'Individual'}, {'capacidad': '2 personas'}, {'capacidad': '4 personas'}], 
+    data2 = [{'acomodacion': '1 cama sencilla'}, {'acomodacion': '1 cama doble'}, {'acomodacion': '2 camas dobles'}], 
+    data3 = [{'baño': 'Baño estándar'}, {'baño': 'Baño con Jacuzzi'}], 
+    titulo = "Gestión Habitaciones", 
+    logo_img = logo_path)
 
 @app.route('/iniciosesion')
 def inicioSesion():
-    return render_template("inicioSesion.html", titulo = "Inicio de Sesión", logo_img = logo_path)
+    formulario = InicioSesion()
+    return render_template("inicioSesion.html", 
+    form = formulario,
+    data = [{'rol': 'Seleccione su rol'}, {'rol': 'Huesped'}, {'rol': 'Administrador'}, {'rol': 'Superadministrador'}], 
+    titulo = "Inicio de Sesión", 
+    logo_img = logo_path)
 
 @app.route('/menuhuesped')
 def menuHuesped():

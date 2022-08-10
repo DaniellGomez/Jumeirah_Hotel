@@ -32,8 +32,6 @@ class informacion:
         #Esto debe ser reemplazado por una orden para introducir dicha info en una tabla de la base de datos
         print(reservaId)
 
-    @staticmethod
-    def getHabitaciones():
+    #@staticmethod
+    #def getHabitaciones():
         #Esto debe ser reemplazado por una orden para introducir dicha info en una tabla de la base de datos
-
-    
