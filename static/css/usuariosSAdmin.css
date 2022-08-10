@@ -265,6 +265,9 @@ label {
 .agregar-usuario{
     letter-spacing: 0;
     color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 6px;
 }
 
 .buscar-group{
@@ -288,6 +291,10 @@ label {
 .buscar{
     letter-spacing: 0;
     color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 6px;
+    left: -10px;
 }
 
 .actualizar-group{
@@ -322,6 +329,10 @@ label {
 .actualizar{
     letter-spacing: 0;
     color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 6px;
+    left: -5px;
 }
 
 .eliminar-group{
@@ -335,16 +346,19 @@ label {
     justify-content: center;
     align-self: center;
     flex: none;
-    position: absolute;
-    left: 17rem;
-    bottom: 0.3rem;
-    
+    position: relative;
+    left: 600%;
+    bottom: 210%;
 
 }
 
 .eliminar{
     letter-spacing: 0;
     color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 6px;
+    left: -5px;
 }
 
 .input-object{

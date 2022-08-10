@@ -217,6 +217,7 @@ label {
     display: flex;
     align-items: center;
     background-color: rgba(49, 49, 49, 1);
+    color: white;
     border-radius: 70px;
     height: 2rem;
     padding: 10px 27.7px;
@@ -225,8 +226,65 @@ label {
     align-self: center;
     flex: none;
     position: relative;
-    left: 11rem;
-    top: 1rem;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.agregarButton {
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    color: white;
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 14rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: relative;
+    text-align: center;
+    padding-top: 0px;
+    left: 55%;
+    padding-top: 3px;
+}
+
+.actualizarButton {
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    color: white;
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 10rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: relative;
+    text-align: center;
+    padding-top: 0px;
+    padding-top: 3px;
+}
+
+.eliminarButton {
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    color: white;
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 7rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: relative;
+    text-align: center;
+    padding-top: 0px;
+    left: 700%;
+    bottom: 400%;
+    padding-top: 3px;
 }
 
 .form_editar{

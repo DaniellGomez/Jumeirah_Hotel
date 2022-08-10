@@ -366,3 +366,43 @@ div .eliminar-group:hover{
 div .salir-group:hover{
     background-color: darkred;
 }
+
+.buscarButton {
+    letter-spacing: 0;
+    color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.buscarDisponibles {
+    letter-spacing: 0;
+    color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.eliminarButton {
+    letter-spacing: 0;
+    color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.actualizarButton {
+    letter-spacing: 0;
+    color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
