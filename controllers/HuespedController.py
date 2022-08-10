@@ -2,14 +2,14 @@ import sqlite3
 from sqlite3 import Error
 import db_config.DB_Connection as db
 
-def sql_insert_supAdmin(doc, nombre, email, rol, password):
+def sql_insert_huesped(doc, nombre, email, rol, password):
     try:
         strsql="INSERT INTO pass_role(num_doc, password, user_role)VALUES('"+ doc +"', '" + password + "', '"+ rol+"');"
         print(strsql)
         cur, conn = db.slq_connection()
         cur.execute(strsql)
         conn.commit()
-        strsql="INSERT INTO superadministradores(num_doc, nombre, email)VALUES('"+ doc +"','"+ nombre +"','"+ email +"' );"
+        strsql="INSERT INTO huespedes(num_doc, nombre, email)VALUES('"+ doc +"','"+ nombre +"','"+ email +"' );"
         print(strsql)
         cur.execute(strsql)
         conn.commit()
@@ -17,9 +17,9 @@ def sql_insert_supAdmin(doc, nombre, email, rol, password):
     except Error:
         print(Error)
 
-def sql_get_supAdmin():
+def sql_get_huesped():
     try:
-        strsql="SELECT * FROM superadministradores;"
+        strsql="SELECT * FROM huespedes;"
         print(strsql)
         cur, conn = db.slq_connection()
         cur.execute(strsql)
@@ -30,9 +30,9 @@ def sql_get_supAdmin():
         print(Error)
     
 
-def sql_edit_supAdmin(doc, nombre, email):
+def sql_edit_huesped(doc, nombre, email):
     try:
-        strsql="UPDATE superadministradores SET nombre = '"+ nombre +"', email = '"+ email +"' WHERE num_doc = '"+ doc +"';"
+        strsql="UPDATE huespedes SET nombre = '"+ nombre +"', email = '"+ email +"' WHERE num_doc = '"+ doc +"';"
         print(strsql)
         cur, conn = db.slq_connection()
         cur.execute(strsql)
@@ -41,7 +41,7 @@ def sql_edit_supAdmin(doc, nombre, email):
     except Error:
         print(Error)
 
-def sql_delete_supAdmin(doc):
+def sql_delete_huesped(doc):
     try:
         strsql="DELETE FROM huespedes WHERE num_doc = '"+ doc +"';"
         print(strsql)
@@ -51,5 +51,3 @@ def sql_delete_supAdmin(doc):
         conn.close()
     except Error:
         print(Error)
-        
-    
