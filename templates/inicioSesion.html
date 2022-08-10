@@ -17,24 +17,29 @@
         <div id="form" name="form">
             <form action="" method="">
                 <select id="userRol" name="userRol">
-                    <option value="selectRol">Seleccione su rol</option>
-                    <option value="huesped">Huesped</option>
-                    <option value="admin">Administrador</option>
-                    <option value="superadmin">Superadministrador</option>
+                    {% for item in data %}
+                        <option value="{{item.rol}}">{{item.rol}}</option>
+                    {% endfor %}
                 </select>
                 <br/>
-                <label>Email</label> 
+                {{form.email.label}} 
                 <br/>
-                <input type="text" id="emailUser" name="emailUser" autocomplete="email"/>
+                <!-- <input type="text" id="emailUser" name="emailUser" autocomplete="email"/>
+                -->
+                {{form.email()}}
                 <br/>
-                <label>Contraseña</label> 
+                {{form.password.label}} 
                 <br/>
-                <input type="password" id="passwordUser" name="passwordUser" autocomplete="password"/>
+                <!-- <input type="password" id="passwordUser" name="passwordUser" autocomplete="password"/>
+                -->
+                {{form.password()}}
                 <br/>
             </form>
             <div id="buttons">
-                <input type="button" class="button" onclick="iniciarSesion()" value="Iniciar sesión"/>
-                <input type="button" class="button" onclick="registro()" value="Registro"/>
+                <!-- <input type="button" class="button" onclick="iniciarSesion()" value="Iniciar sesión"/>
+                -->
+                {{form.iniciarSesion(class_="button")}}
+                <input type="button" class="button" href="registroHuesped.html" value="Registro"/>
             </div>
             
         </div>
