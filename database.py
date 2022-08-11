@@ -109,8 +109,39 @@ def sql_select_contacto(num_doc):
     con.close()
     return contacto
 
-def sql_delete_contacto(num_doc):
-    strsql=("DELETE FROM contacto WHERE num_doc = ?",(num_doc))
+def sql_delete_contacto(id_contacto):
+    strsql=("DELETE FROM contacto WHERE id_contacto = ?",(id_contacto))
+    print(strsql)
+    con=sql_connection()
+    cursor_Obj=con.cursor()
+    cursor_Obj.execute(strsql)
+    con.commit()
+    con.close()
+
+
+##calificaciones
+
+def sql_insert_calificacion(num_doc,num_habitacion,codigo_reserva,comentarios,calificacion):
+    strsql=("INSERT INTO calificaciones (num_doc,num_habitacion,codigo_reserva,comentarios,calificacion) VALUES(?,?,?,?,?)",(num_doc,num_habitacion,codigo_reserva,comentarios,calificacion))
+    print(strsql)
+    con=sql_connection()
+    cursor_Obj=con.cursor()
+    cursor_Obj.execute(strsql)
+    con.commit()
+    con.close()
+
+def sql_select_calificaciones(num_doc,codigo_reserva):
+    strsql=("SELECT * FROM calificaciones WHERE num_doc = ? AND codigo_reserva = ?",(num_doc,codigo_reserva))
+    print(strsql)
+    con=sql_connection()
+    cursor_Obj=con.cursor()
+    cursor_Obj.execute(strsql)
+    calificaciones=cursor_Obj.fetchall()
+    con.close()
+    return calificaciones
+
+def sql_delete_calificaciones(id_calificacion):
+    strsql=("DELETE FROM calificaciones WHERE id_calificacion = ?",(id_calificacion))
     print(strsql)
     con=sql_connection()
     cursor_Obj=con.cursor()

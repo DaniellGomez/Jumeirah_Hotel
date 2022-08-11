@@ -1,5 +1,5 @@
 CREATE TABLE calificaciones (
-    id_calificacion VARCHAR PRIMARY KEY
+    id_calificacion INTEGER PRIMARY KEY AUTOINCREMENT
                             NOT NULL,
     num_doc         VARCHAR REFERENCES huespedes (num_doc) 
                             NOT NULL,
