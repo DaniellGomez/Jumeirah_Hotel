@@ -100,7 +100,7 @@ def sql_insert_contacto(num_doc,nombre,email,comentario):
     con.commit()
     con.close()
 
-#________Pruebas__________
+#__________Pruebas__________
 #sql_insert_contacto("12435687","John Smith","johnsmith@gmail.com","This is a good hotel")
 
 def sql_select_contacto(num_doc):
