@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
+:root{
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: auto;
+    padding-top: 1.5%;
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 0px;
+    position: absolute;
+    width: 100%;
+    height: 22%;
+    top: 40%;
+    font-family: 'Hind';
+    font-style: normal;
+    line-height: 25px;
+    z-index: 2;
+}
+
+select {
+    font-family: 'Hind';
+    font-style: normal;
+    background-color:#AAA;
+    width: 400px;
+}
+
+input {
+    background-color: #AAA;
+    width: 400px;
+    font-family: 'Hind';
+    font-style: normal;
+}
+
+label {
+    font-family: 'Hind';
+    font-style: normal;
+    padding-right: 10px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    font-family: 'Hind';
+    font-style: normal;
+    font-size: 12px;
+}
+
+.button {
+    margin: 25px;
+    font-size: x-large;
+    background-color: #323232;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.whiteBox {
+    position: absolute;
+    width: 76.4%;
+    height: 50%;
+    left: 130px;
+    top: 35%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    z-index: 1; 
+}
+
+#titleRegistro {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0px;
+    top: 17.7%;
+    color: white;
+    background: #323232;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    text-align: center;  
+}
+
+#h1Registro {
+    margin: auto;
+    padding-top: 0.7%;
+    font-size: x-large;
+}
+
+.inputRegistro {
+    align-items: right;
+}
+
+#buttonRegistro {
+    width: 50%;
+    margin: auto;
+    z-index: 2;
+}
+
+#buttonsRegistro {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    font-family: 'Hind';
+    width: 55%;
+    position: absolute;
+    top: 130%;
+    left: 25%;
+}
+
+#buttonText {
+    position: relative;
+    top: -5px;
+    font-size: x-large;
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
+}
+
+#flexForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.formLabels {
+    padding: 10px;
+    font-title: 'Baskervville', serif;
+    font-text:'Baskervville', serif;
+}
+
+.formInputs {
+    padding: 10px;
+}
+
+#comentarioField {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    top: 3%;
+    background-color: #AAA;
+}
