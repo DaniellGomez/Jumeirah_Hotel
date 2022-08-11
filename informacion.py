@@ -1,19 +1,18 @@
+from database.database import *
+from controllers.HuespedController import *
+from controllers.AdminController import *
+from controllers.SupAdminController import *
+
 class informacion:
     @staticmethod
-    def getContacto(nombre, id, email, comentario):
+    def setContacto(nombre, id, email, comentario):
         #Esto debe ser reemplazado por una orden para introducir dicha info en una tabla de la base de datos
-        print(nombre)
-        print(id)
-        print(email)
-        print(comentario)
+        sql_insert_contacto(id,nombre,email,comentario)
 
     @staticmethod
-    def getRegistro(nombre, id, email, contraseña):
+    def setRegistro(nombre, id, email, password):
         #Esto debe ser reemplazado por una orden para introducir dicha info en una tabla de la base de datos
-        print(nombre)
-        print(id)
-        print(email)
-        print(contraseña)
+        sql_insert_huesped(id, nombre, email, "huesped", password)
 
     @staticmethod
     def setReserva(huespedId, reservaId, numeroCuarto, fechaIncio, dias):

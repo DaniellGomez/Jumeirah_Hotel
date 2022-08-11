@@ -34,7 +34,7 @@ def contacto():
     formulario = FormContacto()
     if request.method == "POST":
         flash("El formulario fue enviado con éxito")
-        informacion.getContacto(formulario.nombre.data, formulario.numeroId.data, formulario.email.data, formulario.comentario.data)
+        informacion.setContacto(formulario.nombre.data, formulario.numeroId.data, formulario.email.data, formulario.comentario.data)
         formulario.nombre.data = ""
         formulario.numeroId.data = ""
         formulario.email.data = ""
@@ -46,7 +46,7 @@ def contacto():
 def registro():
     formulario = FormRegistro()
     if request.method == "POST":
-        informacion.getRegistro(formulario.nombre.data, formulario.numeroId.data, formulario.email.data, formulario.password.data)
+        informacion.setRegistro(formulario.nombre.data, formulario.numeroId.data, formulario.email.data, formulario.password.data)
         formulario.nombre.data = ""
         formulario.numeroId.data = ""
         formulario.email.data = ""
