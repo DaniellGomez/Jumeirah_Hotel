@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if titulo %}
+        <title>{{ titulo }}</title>
+    {% else %}
+        <title>Reservas Jumeirah</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css')}}">
+
+    {% block head %}
+
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{{ logo_img }}" alt="logo">
+        </div>
+        <ul>
+            <li><a href="home">Home Page</a></li>
+            <li><a href="habitaciones">Cuartos y Suits</a></li>
+            <li><a href="contacto">Contacto</a></li>
+            <li><a href="#">Usuarios</a></li>
+        </ul>
+        <div class="login_button">
+            <a href="inicioSesion">Login</a>
+        </div>
+    </nav>
+
+    {% with mensajes = get_flashed_messages() %}
+    {% if mensajes %}
+        <ul>
+            {% for mensaje in mensajes %}
+            <li>{{mensaje}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+    {% block principal %}
+
+    {% endblock %}
+</body>
+</html>
