@@ -4,14 +4,16 @@ import db_config.DB_Connection as db
 
 def sql_insert_supAdmin(doc, nombre, email, rol, password):
     try:
-        strsql="INSERT INTO pass_role(num_doc, password, user_role)VALUES('"+ doc +"', '" + password + "', '"+ rol+"');"
+        strsql="INSERT INTO pass_role(num_doc, password, user_role) VALUES(?,?,?)"
+        val=(doc,password,rol)
         print(strsql)
-        cur, conn = db.slq_connection()
-        cur.execute(strsql)
+        conn, cur = db.slq_connection()
+        cur.execute(strsql,val)
         conn.commit()
-        strsql="INSERT INTO superadministradores(num_doc, nombre, email)VALUES('"+ doc +"','"+ nombre +"','"+ email +"' );"
+        strsql="INSERT INTO superadministradores(num_doc, nombre, email) VALUES(?,?,?)"
+        val=(doc,nombre,email)
         print(strsql)
-        cur.execute(strsql)
+        cur.execute(strsql,val)
         conn.commit()
         conn.close()
     except Error:
@@ -21,7 +23,7 @@ def sql_get_supAdmin():
     try:
         strsql="SELECT * FROM superadministradores;"
         print(strsql)
-        cur, conn = db.slq_connection()
+        conn, cur = db.slq_connection()
         cur.execute(strsql)
         supAdministrators = cur.fetchall()
         conn.close()
@@ -32,10 +34,11 @@ def sql_get_supAdmin():
 
 def sql_edit_supAdmin(doc, nombre, email):
     try:
-        strsql="UPDATE superadministradores SET nombre = '"+ nombre +"', email = '"+ email +"' WHERE num_doc = '"+ doc +"';"
+        strsql="UPDATE superadministradores SET nombre = ?, email = ? WHERE num_doc = ?"
+        val=(nombre,email,doc)
         print(strsql)
-        cur, conn = db.slq_connection()
-        cur.execute(strsql)
+        conn, cur = db.slq_connection()
+        cur.execute(strsql,val)
         conn.commit()
         conn.close()
     except Error:
@@ -43,10 +46,11 @@ def sql_edit_supAdmin(doc, nombre, email):
 
 def sql_delete_supAdmin(doc):
     try:
-        strsql="DELETE FROM huespedes WHERE num_doc = '"+ doc +"';"
+        strsql="DELETE FROM huespedes WHERE num_doc = ?"
+        val=(doc)
         print(strsql)
-        cur, conn = db.slq_connection();
-        cur.execute()
+        conn, cur = db.slq_connection();
+        cur.execute(strsql,val)
         conn.commit()
         conn.close()
     except Error:
