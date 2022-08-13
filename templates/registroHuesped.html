@@ -1,0 +1,63 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/registroHuesped.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <style type="text/css">
+        body {
+            background-image: url("/static/images/fondoRegistro.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <div class="whiteBox">
+
+    </div>
+
+    <div id="titleRegistro">
+        <h1 id="h1Registro">Registro de Huespedes</h1>
+    </div>
+
+    <div id="form">
+        <form action="" method="POST">
+            {{form.hidden_tag()}}
+            <div id="flexForm">
+                <div id="formLabels">
+                    {{form.nombre.label}}
+                    <br/>
+                    {{form.numeroId.label}}
+                    <br/>
+                    {{form.email.label}}
+                    <br/>
+                    {{form.password.label}}
+                    <br/>
+                    {{form.confirmarPassword.label}}
+                </div>
+                <div id="formInputs">
+                <!-- <input class="inputRegistro" type="text" name="emailUser" autocomplete="email"/> -->
+                {{form.nombre(class_="inputRegistro")}}
+                <br />
+                <!-- <input class="inputRegistro" type="text" name="idUser" autocomplete="id"/> -->
+                {{form.numeroId(class_="inputRegistro")}}
+                <br />
+                <!-- <input class="inputRegistro" type="email" name="emailUser" autocomplete="email"/> -->
+                {{form.email(class_="inputRegistro")}}
+                <br />
+                <!-- <input class="inputRegistro" type="password" name="passwordUser" autocomplete="password"> -->
+                {{form.password(class_="inputRegistro")}}
+                <br />
+                <!-- <input class="inputRegistro" type="password" name="passwordUser" autocomplete="password"> -->
+                {{form.confirmarPassword(class_="inputRegistro")}}
+            </div>
+            </div>
+
+            <div id="buttonsRegistro">
+                <!-- <button href="UserMain.html" id="buttonRegistro" class="button" value="Completar registro"><a id="buttonText" href="UserMain.html">Completar registro</a></button> -->
+                {{form.enviar(class_="button")}}
+            </div>
+        </form>
+    </div>
+{% endblock %}

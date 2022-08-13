@@ -1,0 +1,27 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menuAdmin.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <section>
+        <div class="cuerpo">
+            <div class="centerItems">    
+                <h1 class="admin_welcome">Bienvenido, ¿qué desea hacer? </h1>
+                <div class="opcion1">
+                    <div class="gestionar-habitaciones valign-text-middle">
+                        <a class="buttonText" href="SAdmin_gestionar_habitaciones.html">Gestionar Habitaciones</a>
+                    </div>
+                </div>
+                <div class="opcion2">
+                    <div class="gestionar-reservas valign-text-middle">
+                        <a class="buttonText" href="admin_reservas.html">Gestionar Reservas</a>
+                    </div>
+                </div>
+            </div>
+                <div class="opcionsalir">
+                    <a href="HomePage.html" class="gestion-salir">Salir</a>
+        </div>
+    </section>
+{% endblock %}

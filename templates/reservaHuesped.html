@@ -1,0 +1,71 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reservaHuesped.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <div class="container">
+        <h1>Habitacion Estandar</h1>
+        <div class="filters">
+            <div class="input_selector">
+                {{form.fechaInicio.label}}
+                {{form.fechaInicio(size = 15)}}
+            </div>
+            <div class="input_selector">
+                {{form.dias.label}}
+                {{form.dias(size = 4)}}
+            </div>
+        </div>
+        <div class="room_finded">
+            <h2 id="doble">Cuarto Doble</h2>
+            <div class="room_content">
+                <div class="image">
+                    <!-- <img src="../images/Habitacion_Estandar.png" alt="Image"> -->
+                    <img src="{{ estandar }}" alt="Image">
+                </div>
+                <div class="room_info">
+                    <div class="info_item">
+                        <h3>Nro de Cuarto</h3>
+                        <p>402</p>
+                    </div>
+                    <div class="info_item">
+                        <h3>Camas</h3>
+                        <p>Una cama Doble</p>
+                    </div>
+                    <div class="info_item">
+                        <h3>Personas</h3>
+                        <p>2 Personas</p>
+                    </div>
+                    <div class="info_item">
+                        <h3>Baño</h3>
+                        <p>Ducha duble y tina doble</p>
+                    </div>
+                    <div class="info_item">
+                        <h3>Servicios</h3>
+                        <p>Comida al cuarto 24hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buscarGroup">
+                {{form.reservaId.label}}
+                {{form.reservaId(size = 10)}}
+                {{form.buscar(class_="buttons")}}
+            </div>
+            <div class="room_actions">
+
+                <div class="room_button">
+                    {{form.eliminar(class_="buttons")}}
+                </div>
+                <div class="room_button">
+                    {{form.editar(class_="buttons")}}
+                </div>
+                <div class="room_button">
+                    {{form.reserva(class_="buttons")}}
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
