@@ -76,4 +76,4 @@ class GestionReserva(FlaskForm):
 class InicioSesion(FlaskForm):
     email = EmailField("Email", validators = [DataRequired()])
     password = PasswordField("Contraseña", validators = [DataRequired()])
-    iniciarSesion = SubmitField("Iniciar Sesión", id = "inicarSesion")
+    iniciarSesion = SubmitField("Iniciar Sesión", id = "iniciarSesion")

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, flash, request
+from flask import Flask, render_template, url_for, redirect, flash, request, session
 import os
 from forms import *
 from settings.config import configuracion
@@ -146,14 +146,34 @@ def habitacionesAdmin():
     titulo = "Gestión Habitaciones", 
     logo_img = logo_path)
 
-@app.route('/iniciosesion')
+@app.route('/iniciosesion', methods=['GET', 'POST'])
 def inicioSesion():
     formulario = InicioSesion()
+    correo=formulario.email.data
+    password=formulario.password.data
+
+    if request.method== "POST":
+        if request.form['iniciarSesion'] == 'Iniciar Sesión':
+            correo=formulario.email.data
+            password=formulario.password.data
+            password = password.encode('utf-8')
+            hashedPassword = bcrypt.hashpw(password, bcrypt.gensalt(10))
+
+            if correo == sql_get_email_huesped(correo) and hashedPassword == sql_get_password_huesped(correo):
+                print("Inicio Sesión fue exitoso")
+                session['usuario'] = correo
+                return redirect("menuHuesped")
+            else:
+                print("Password Incorrecto")
+                return redirect("iniciosesion")
+
     return render_template("inicioSesion.html", 
     form = formulario,
     data = [{'rol': 'Seleccione su rol'}, {'rol': 'Huesped'}, {'rol': 'Administrador'}, {'rol': 'Superadministrador'}], 
     titulo = "Inicio de Sesión", 
     logo_img = logo_path)
+
+
 
 @app.route('/menuhuesped')
 def menuHuesped():

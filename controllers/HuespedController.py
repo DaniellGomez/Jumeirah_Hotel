@@ -27,9 +27,9 @@ def sql_get_huesped():
         print(strsql)
         conn, cur = db.slq_connection()
         cur.execute(strsql)
-        supAdministrators = cur.fetchall()
+        huespedes = cur.fetchall()
         conn.close()
-        return supAdministrators
+        return huespedes
     # except Error:
     #     print(Error)
     
@@ -52,8 +52,30 @@ def sql_delete_huesped(doc):
         val=(doc)
         print(strsql)
         conn, cur = db.slq_connection();
-        cur.execute(strsql,val)
+        cur.execute(strsql,[val])
         conn.commit()
         conn.close()
     # except Error:
     #     print(Error)
+
+def sql_get_email_huesped(email):
+    # try:
+        strsql="SELECT email FROM huespedes WHERE email = ?"
+        val=(email)
+        print(strsql)
+        conn, cur = db.slq_connection()
+        cur.execute(strsql,[val])
+        email = cur.fetchall()
+        conn.close()
+        return email
+
+def sql_get_password_huesped(email):
+    # try:
+        strsql="SELECT password FROM pass_role WHERE num_doc in (SELECT num_doc from huespedes WHERE email = ?)"
+        val=(email)
+        print(strsql)
+        conn, cur = db.slq_connection()
+        cur.execute(strsql,[val])
+        email = cur.fetchall()
+        conn.close()
+        return password
