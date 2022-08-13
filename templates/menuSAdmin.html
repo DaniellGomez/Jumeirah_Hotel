@@ -1,0 +1,35 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menuSAdmin.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <style>
+        body {
+            background-image: url("/static/images/fondoMenuSAdmin.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <div class="menu-superadmin">
+        <div class="overlap-group3">
+            <div class="overlap-group4">
+                <h1 class="bienvenido">Bienvenido, ¿Qué desea hacer?: </h1>
+                <div class="overlap-group1">
+                    <div class="gestionar-usuarios valign-text-middle"><a class="buttonText" href="SAdmin_gestionar_usuarios.html">Gestionar Usuarios</a>
+                    </div>
+                </div>
+                <div class="overlap-group2">
+                    <div class="gestionar-habitaciones valign-text-middle"><a class="buttonText" href="SAdmin_gestionar_habitaciones.html">Gestionar Habitaciones</a></div>
+                </div>
+                <div class="overlap-group">
+                    <div class="salir"><a class="buttonText" href="HomePage.html">Salir</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

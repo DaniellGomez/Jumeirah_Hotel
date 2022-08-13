@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/fondoRegistro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin: auto;
+    padding-top: 1.5%;
+    font-size: x-large;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 0px;
+    position: absolute;
+    width: 100%;
+    height: 22%;
+    top: 40%;
+    font-family: 'Hind';
+    font-style: normal;
+    line-height: 25px;
+}
+
+input {
+    background-color: #AAA;
+    width: 400px;
+    font-family: 'Hind';
+    font-style: normal;
+}
+
+label {
+    font-family: 'Hind';
+    font-style: normal;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    font-family: 'Hind';
+    font-style: normal;
+    font-size: 12px;
+    width: 100%;
+}
+
+.button {
+    margin: 25px;
+    font-size: 2em;
+    background-color: #323232;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+    left: 50%;
+}
+
+#buttonText {
+    position: relative;
+    top: -3px;
+    font-size: x-large;
+}
+
+.whiteBox {
+    position: absolute;
+    width: 76.4%;
+    height: 50%;
+    left: 130px;
+    top: 35%;
+    background: #FFFFFF;
+    border-radius: 20px; 
+}
+
+#titleRegistro {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0px;
+    top: 17.7%;
+    color: white;
+    background: #323232;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    text-align: center;  
+}
+
+#h1Registro {
+    margin: auto;
+    padding-top: 0.7%;
+}
+
+.inputRegistro {
+    align-items: right;
+}
+
+#buttonRegistro {
+    width: 80%;
+    margin: auto;
+    font-size: 25px;
+}
+
+#buttonsRegistro {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    font-family: 'Hind';
+    font-style: normal;
+    width: 55%;
+}
+
+#flexForm {
+    display: flex;
+    flex-direction: row;
+}
+
+#formLabels {
+    padding: 10px;
+}
+
+#formInputs {
+    padding: 10px;
+}
+
