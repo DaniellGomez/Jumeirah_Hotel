@@ -1,6 +1,7 @@
-import sqlite3
+#import sqlite3
 #from sqlite3 import Error
 import db_config.DB_Connection as db
+
 
 
 def sql_insert_huesped(doc, nombre, email, rol, password):

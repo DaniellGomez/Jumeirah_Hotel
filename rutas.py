@@ -3,6 +3,7 @@ import os
 from forms import *
 from settings.config import configuracion
 from informacion import *
+from flask_login import LoginManager
 
 app=Flask(__name__)
 app.run(port = 5000, debug = True)
