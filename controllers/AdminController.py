@@ -50,7 +50,7 @@ def sql_delete_admin(doc):
         val=(doc)
         print(strsql)
         conn, cur = db.slq_connection();
-        cur.execute(strsql,val)
+        cur.execute(strsql,[val])
         conn.commit()
         conn.close()
     except Error:

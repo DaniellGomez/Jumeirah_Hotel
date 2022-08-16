@@ -33,9 +33,10 @@ def sql_select_habitacion(num_hab):
     return habitacion
 
 def sql_edit_habitacion(num_hab,capacidad,acomodacion,bano):
-    strsql="UPDATE habitaciones SET hab_capacidad = ? , SET hab_acomodacion = ? , SET hab_bano = ? WHERE num_habitacion = ?"
+    strsql="UPDATE habitaciones SET hab_capacidad = ? , hab_acomodacion = ? , hab_bano = ? WHERE num_habitacion = ?"
     val=(capacidad,acomodacion,bano,num_hab)
     print(strsql)
+    #print(capacidad + ", " + capacidad + ", " + acomodacion + ", " + bano)
     con=sql_connection()
     cursor_Obj=con.cursor()
     cursor_Obj.execute(strsql,val)

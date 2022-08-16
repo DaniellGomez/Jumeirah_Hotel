@@ -60,57 +60,102 @@ def registro():
 def menuSuperAdmin():
     return render_template("menuSAdmin.html", titulo = "Menú Superadmistrador", logo_img = logo_path)
 
-@app.route('/gestionhabitaciones', methods=['GET', 'POST'])
-def habitacionesSuperAdmin():
-    formulario1 = AgregarHabitaciones()
-    formulario2 = BuscarHabitaciones()
-    formulario3 = GestionHabitaciones()
-
+@app.route('/agregarhabitacion', methods=['GET', 'POST'])
+def agregarHabitacion():
+    formulario1 = AgregarHabitacion()
     if request.method == "POST":
-        
-        num_habitacion = "";
-        
         if request.form['button'] == 'Agregar Habitación':
-        #if formulario1.agregarHabitacion.data and formulario1.validate:
-            print("agregar")
             sql_insert_habitacion(formulario1.numHabitacion.data, request.form.get('room_capacity'),request.form.get('room_layout'), request.form.get('room_bath'))
-        
 
-        elif request.form['button'] == 'Buscar':
-            #print(formulario2.buscar.data)
-            habitacion = sql_select_habitacion(formulario2.buscar.data)
-            #for row in habitacion:
-                #print(row)
-            num_habitacion = formulario2.buscar.data
-            if request.form['button'] == 'Actualizar':
-                print(num_habitacion)
-                sql_edit_habitacion(num_habitacion, request.form.get('room_capacity3'),request.form.get('room_layout3'), request.form.get('room_bath3'))
-            
-            elif request.form['button'] == 'Eliminar':
-                sql_delete_habitacion(formulario2.buscar.data)
-            
-
-    return render_template("habitacionesSAdmin.html", 
+    return render_template("agregarHabitacion.html", 
     form1 = formulario1, 
-    form2 = formulario2, 
-    form3 = formulario3, 
     data1 = [{'capacidad': 'Individual'}, {'capacidad': '2 personas'}, {'capacidad': '4 personas'}], 
     data2 = [{'acomodacion': '1 cama sencilla'}, {'acomodacion': '1 cama doble'}, {'acomodacion': '2 camas dobles'}], 
     data3 = [{'baño': 'Baño estándar'}, {'baño': 'Baño con Jacuzzi'}], 
-    titulo = "Gestión Habitaciones", 
+    titulo = "Agregar Habitación", 
     logo_img = logo_path)
 
-@app.route('/gestionusuarios')
-def usuariosSuperAdmin():
+@app.route('/editarhabitacion', methods=['GET', 'POST'])
+def editarHabitacion():
+    formulario1 = EditarHabitacion()
+    if request.method == "POST":
+        if request.form['button'] == 'Editar Habitación':
+            sql_edit_habitacion(formulario1.numHabitacion.data, request.form.get('room_capacity'),request.form.get('room_layout'), request.form.get('room_bath'))
+
+    return render_template("editarHabitacion.html", 
+    form1 = formulario1, 
+    data1 = [{'capacidad': 'Individual'}, {'capacidad': '2 personas'}, {'capacidad': '4 personas'}], 
+    data2 = [{'acomodacion': '1 cama sencilla'}, {'acomodacion': '1 cama doble'}, {'acomodacion': '2 camas dobles'}], 
+    data3 = [{'baño': 'Baño estándar'}, {'baño': 'Baño con Jacuzzi'}], 
+    titulo = "Editar Habitación", 
+    logo_img = logo_path)
+
+@app.route('/eliminarhabitacion', methods=['GET', 'POST'])
+def eliminarHabitacion():
+    formulario1 = EliminarHabitacion()
+    if request.method == "POST":
+        if request.form['button'] == 'Eliminar Habitación':
+            sql_delete_habitacion(formulario1.numHabitacion.data)
+
+    return render_template("eliminarHabitacion.html", 
+    form1 = formulario1, 
+    titulo = "Eliminar Habitación", 
+    logo_img = logo_path)
+
+@app.route('/agregarusuario', methods=['GET', 'POST'])
+def agregarUsuarioSA():
     formulario1 = RegistrarUsuario()
-    formulario2 = BuscarUsuario()
-    formulario3 = GestionUsuario()
-    return render_template("usuariosSAdmin.html", 
+    
+    if request.method == "POST":
+        if request.form['button'] == 'Agregar Usuario':
+            if request.form.get('user_rol') == 'Huesped':
+                print("agregar Usuario")
+                sql_insert_huesped(formulario1.numId.data, formulario1.nombre.data, formulario1.email.data, "Huesped", formulario1.password.data)
+            elif request.form.get('user_rol') == 'Administrador':
+                sql_insert_admin(formulario1.numId.data, formulario1.nombre.data, formulario1.email.data, "Administrador", formulario1.password.data)
+            elif request.form.get('user_rol') == 'Superadministrador':
+                sql_insert_supAdmin(formulario1.numId.data, formulario1.nombre.data, formulario1.email.data, "Superadministrador", formulario1.password.data)
+
+    return render_template("agregarUsuario.html", 
     form1 = formulario1,
-    form2 = formulario2,
-    form3 = formulario3,
     data = [{'rol': 'Huesped'}, {'rol': 'Administrador'}, {'rol': 'Superadministrador'}],
-    titulo = "Gestión Usuarios", logo_img = logo_path)
+    titulo = "Registrar Usuarios", logo_img = logo_path)
+
+@app.route('/editarusuario', methods=['GET', 'POST'])
+def editarUsuarioSA():
+    formulario1 = EditarUsuario()
+    
+    if request.method == "POST":
+        if request.form['button'] == 'Editar Usuario':
+            if request.form.get('user_rol') == 'Huesped':
+                sql_edit_huesped(formulario1.numId.data, formulario1.nombre.data, formulario1.email.data)
+            elif request.form.get('user_rol') == 'Administrador':
+                sql_edit_admin(formulario1.numId.data, formulario1.nombre.data, formulario1.email.data)
+            elif request.form.get('user_rol') == 'Superadministrador':
+                sql_edit_supAdmin(formulario1.numId.data, formulario1.nombre.data, formulario1.email.data)
+    
+    return render_template("editarUsuario.html", 
+    form1 = formulario1,
+    data = [{'rol': 'Huesped'}, {'rol': 'Administrador'}, {'rol': 'Superadministrador'}],
+    titulo = "Editar Usuarios", logo_img = logo_path)
+
+@app.route('/eliminarusuario', methods=['GET', 'POST'])
+def eliminarUsuarioSA():
+    formulario1 = EliminarUsuario()
+    
+    if request.method == "POST":
+        if request.form['button'] == 'Eliminar Usuario':
+            if request.form.get('user_rol') == 'Huesped':
+                sql_delete_huesped(formulario1.numId.data)
+            elif request.form.get('user_rol') == 'Administrador':
+                sql_delete_admin(formulario1.numId.data)
+            elif request.form.get('user_rol') == 'Superadministrador':
+                sql_delete_supAdmin(formulario1.numId.data)
+    
+    return render_template("eliminarUsuario.html", 
+    form1 = formulario1,
+    data = [{'rol': 'Huesped'}, {'rol': 'Administrador'}, {'rol': 'Superadministrador'}],
+    titulo = "Eliminar Usuarios", logo_img = logo_path)
 
 @app.route('/menuadmin')
 def menuAdmin():

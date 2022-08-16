@@ -26,24 +26,35 @@ class FormHabitaciones(FlaskForm):
     reservaId = StringField("Reserva ID.", validators = [DataRequired(message = "Digite el número ID. de la reserva")])
     buscar = SubmitField("Buscar", id="buscar")
 
-class AgregarHabitaciones(FlaskForm):
+class AgregarHabitacion(FlaskForm):
     numHabitacion = StringField("N° Habitación", validators = [DataRequired(message = "Digite el número de la habitación")])
-    agregarHabitacion = SubmitField("Agregar Habitación", id = "agregar")
+    agregarHabitacion = SubmitField("Agregar Habitación", id = "agregar", name="button")
 
-class BuscarHabitaciones(FlaskForm):
-    buscar = StringField("N° Habitación", id="room_number", validators = [DataRequired(message = "Digite el número de la habitación")])
-    buscarButton = SubmitField("Buscar", id = "buscar")
+class EditarHabitacion(FlaskForm):
+    numHabitacion = StringField("N° Habitación", id="room_number", validators = [DataRequired(message = "Digite el número de la habitación")])
+    editarButton = SubmitField("Editar Habitación", id = "buscar", name="button")
 
-class GestionHabitaciones(FlaskForm):
-    actualizar = SubmitField("Actualizar", id= "actualizar")
-    eliminar = SubmitField("Eliminar", id= "eliminar")
+class EliminarHabitacion(FlaskForm):
+    numHabitacion = StringField("N° Habitación", id="room_number", validators = [DataRequired(message = "Digite el número de la habitación")])
+    eliminar = SubmitField("Eliminar Habitación", id= "eliminar", name="button")
 
 class RegistrarUsuario(FlaskForm):
     nombre = StringField("Nombre", validators = [DataRequired(message = "Digite el nombre del usuario")])
     numId = StringField("Número ID", validators = [DataRequired(message = "Digite el número de Id del usuario")])
     email = EmailField("Email", validators = [DataRequired(message = "Digite el email del usuario")])
     password = PasswordField("Asignar Contraseña", validators = [DataRequired(message = "Digite la contrseña del usuario")])
-    agregarUsuario = SubmitField("Agregar Usuario", id="agregarUsuario")
+    agregarUsuario = SubmitField("Agregar Usuario", id="agregarUsuario", name="button")
+
+class EditarUsuario(FlaskForm):
+    nombre = StringField("Nombre", validators = [DataRequired(message = "Digite el nombre del usuario")])
+    numId = StringField("Número ID", validators = [DataRequired(message = "Digite el número de Id del usuario")])
+    email = EmailField("Email", validators = [DataRequired(message = "Digite el email del usuario")])
+    password = PasswordField("Asignar Contraseña", validators = [DataRequired(message = "Digite la contrseña del usuario")])
+    agregarUsuario = SubmitField("Editar Usuario", id="agregarUsuario", name="button")
+
+class EliminarUsuario(FlaskForm):
+    numId = StringField("Número ID", validators = [DataRequired(message = "Digite el número de Id del usuario")])
+    eliminarUsuario = SubmitField("Eliminar Usuario", id="agregarUsuario", name="button")
 
 class BuscarUsuario(FlaskForm):
     buscar = StringField("N° ID", id="buscarUsuario", validators = [DataRequired(message = "Digite el número de ID del usuario")])

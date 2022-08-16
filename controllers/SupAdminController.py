@@ -46,11 +46,12 @@ def sql_edit_supAdmin(doc, nombre, email):
 
 def sql_delete_supAdmin(doc):
     try:
-        strsql="DELETE FROM huespedes WHERE num_doc = ?"
+        strsql="DELETE FROM superadministradores WHERE num_doc = ?"
         val=(doc)
         print(strsql)
+        print(val)
         conn, cur = db.slq_connection();
-        cur.execute(strsql,val)
+        cur.execute(strsql, [val])
         conn.commit()
         conn.close()
     except Error:

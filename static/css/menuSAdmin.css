@@ -101,17 +101,6 @@
     color: #FFFFFF;
 }
 
-.overlap-group1{
-    position: absolute;
-    width: 382px;
-    height: 66px;
-    left: 20%;
-    top: 15%;
-    background: #323232;
-    border-radius: 50px;
-    margin-top: 40px;
-}
-
 .gestionar-usuarios{
     position: absolute;
     width: 231px;
@@ -135,7 +124,27 @@
     width: 382px;
     height: 66px;
     left: 20%;
-    top: 50%;
+    top: 10rem;
+    background: #323232;
+    border-radius: 50px;
+}
+
+.overlap-group5{
+    position: absolute;
+    width: 382px;
+    height: 66px;
+    left: 20%;
+    top: 0%;
+    background: #323232;
+    border-radius: 50px;
+}
+
+.overlap-group6{
+    position: absolute;
+    width: 382px;
+    height: 66px;
+    left: 20%;
+    top: 0%;
     background: #323232;
     border-radius: 50px;
 }
@@ -171,4 +180,78 @@ a{
 
 .buttonText {
     font-size: large;
+    margin: auto;
+}
+
+.overlap-group1{
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    left: 7rem;
+    top: 3rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.overlap-group2{
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    left: 7rem;
+    top: 7rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.overlap-group5{
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    left: 7rem;
+    top: 11rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.overlap-group6{
+    position: absolute;
+    width: 16rem;
+    height: 3rem;
+    left: 20rem;
+    top: 3rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.overlap-group7{
+    position: absolute;
+    width: 16rem;
+    height: 3rem;
+    left: 20rem;
+    top: 7rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.overlap-group8{
+    position: absolute;
+    width: 16rem;
+    height: 3rem;
+    left: 20rem;
+    top: 11rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.overlap-group {
+    position: absolute;
+    left: 25rem;
+    top: 18rem;
+    text-align: center;
 }

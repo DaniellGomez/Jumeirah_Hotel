@@ -64,7 +64,7 @@ nav .login_button{
     font-style: normal;
     text-align: center;
     background-color: #FFFFFF;
-    background-image: url(../images/gestionUsuariosFondo.jpg);
+    background-image: url(../images/gestionHabitacionesFondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -74,7 +74,6 @@ nav .login_button{
 
 h1 {
     margin: auto;
-    padding-top: 1.5%;
     font-size: 1rem;
 }
 
@@ -101,13 +100,13 @@ label {
 
 .forms_container{
     background-color: rgba(217,217,217,1);
-    height: 80%;
+    height: 27rem;
     width: 95%;
     opacity: 95%;
     display: flex;
     position: absolute;
     left: 2rem;
-    top: 6rem;
+    top: 8rem;
     align-content: space-between;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -133,7 +132,7 @@ label {
     letter-spacing: 0;
     position: absolute;
     left: 40%;
-    top: -2%;
+    height: 40%;
 }
 
 .salir-group{
@@ -159,225 +158,101 @@ label {
 .forms {
     display: flex;
     flex-direction: row;
-    top: 5%;
 }
 
 .form_registro{
     display: flex;
     background-color: rgb(231, 227, 216);
-    height: 28rem;
+    height: 20rem;
     position: absolute;
-    top: 10%;
+    top: 3rem;
     align-items: center;
-    justify-content: center;
-    left: 5rem;
+    left: 3rem;
     flex: none;
+    justify-content: space-between;
     order: 1;
-    width: 40%;
-}
-
-.formRigth {
-    display:flex;
-    flex-direction: column;
-    width: 35%;
+    width: 90%;
+    align-items: center;
 }
 
 .form_title{
     background-color: rgba(49, 49, 49, 1);
     display: flex;
     height: 2rem;
-    top: -2.5rem;
+    top: 0rem;
     color:#FFFFFF;
     font-family: "Kaisei Decol";
     align-self:flex-start;
-    position: relative;
+    position: absolute;
     width: 100%;
     flex: none;
     order:0;
-    padding: 0px;
-    position: absolute;
-    width: 100%;
-    left: 0%;
-    top: 0%;
-}
-
-#registrarTitle {
-    position: absolute;
-    width: 100%;
-    left: 0%;
-    top: 0%;
-}
-
-.form_buscar{
-    display: flex;
-    background-color: rgb(231, 227, 216);
-    height: 10rem;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    width: 45%;
-    align-items: center;
-    justify-content: center;
-    flex: none;
-    order: 2;
     
-
 }
 
-.consultaLabel {
-    position: absolute;
-    left: 5%;
-    top: 45%;
-}
-
-.consultaInput {
-    position: absolute;
-    width: 70%;
-    left: 25%;
-}
-
-.form_editar{
+.agregarButton {
     display: flex;
-    background-color: rgb(231, 227, 216);
-    height: 17rem;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    width: 45%;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    color: white;
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 14rem;
+    justify-content: center;
+    align-self: center;
     flex: none;
-    order: 3;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.agregar-usuario-group{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(49, 49, 49, 1);
-    border-radius: 70px;
-    height: 2rem;
-    padding: 10px 27.7px;
-    margin-top: 3rem;
-}
-
-.agregar-usuario{
-    letter-spacing: 0;
-    color: #FFFFFF;
-    background-color: #323232;
     position: relative;
-    bottom: 6px;
+    text-align: center;
+    left: 170%;
+    padding-top: 3px;
+    top: 40px;
 }
 
-.buscar-group{
+.agregar-habitacion-group{
     display: flex;
     align-items: center;
     background-color: rgba(49, 49, 49, 1);
     border-radius: 70px;
     height: 2rem;
     padding: 10px 27.7px;
-    width: 10rem;
+    width: 15rem;
     justify-content: center;
     align-self: center;
     flex: none;
     position: absolute;
     left: 10rem;
-    bottom: 0.4rem;
-    
-
+    bottom: 4rem;
 }
 
-.buscar{
+.agregar-habitacion{
     letter-spacing: 0;
     color: #FFFFFF;
-    background-color: #323232;
-    position: relative;
-    bottom: 6px;
-    left: -10px;
 }
 
-.actualizar-group{
+.centerButton {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    background-color: rgba(49, 49, 49, 1);
-    border-radius: 70px;
-    height: 2rem;
-    padding: 10px 27.7px;
-    width: 8rem;
-    justify-content: center;
-    align-self: center;
-    flex: none;
-    position: absolute;
-    left: 5rem;
-    bottom: 0.3rem;
-    
-
-}
-
-.resultadoLabel {
-    position: absolute;
-    left: 5%;
-}
-
-.resultadoInput {
-    position: absolute;
-    width: 70%;
-    left: 25%;
-}
-
-.actualizar{
-    letter-spacing: 0;
-    color: #FFFFFF;
-    background-color: #323232;
-    position: relative;
-    bottom: 6px;
-    left: -5px;
-}
-
-.eliminar-group{
-    display: flex;
-    align-items: center;
-    background-color: rgba(49, 49, 49, 1);
-    border-radius: 70px;
-    height: 2rem;
-    padding: 10px 27.7px;
-    width: 8rem;
-    justify-content: center;
-    align-self: center;
-    flex: none;
-    position: relative;
-    left: 600%;
-    bottom: 210%;
-
-}
-
-.eliminar{
-    letter-spacing: 0;
-    color: #FFFFFF;
-    background-color: #323232;
-    position: relative;
-    bottom: 6px;
-    left: -5px;
 }
 
 .input-object{
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    padding: 15px;
+   display: flex;
+   flex-direction: row;
+   padding: 10px;
+   left: 100px;
+   width: 100%;
+   padding-left: 40%;
 }
 
-.registrarInput {
+.agregarInput {
     position: absolute;
-    width: 50%;
-    left: 45%;
-
+    width: 60%;
+    left: 30%;
 }
 
-.registrarLabel {
-    position: absolute;
-    left: 5%;
+#room_number {
+    width: 60%;
 }
 
 input{
@@ -403,27 +278,4 @@ select{
 a{
     text-decoration: none;
     color: #FFFFFF;
-}
-
-nav .login_button:hover{
-    background-color: dimgrey;
-}
-div .agregar-habitacion-group:hover{
-    background-color: dimgrey;
-}
-div .buscar-group:hover{
-    background-color: dimgrey;
-}
-div .actualizar-group:hover{
-    background-color: dimgrey;
-}
-div .eliminar-group:hover{
-    background-color: darkred;
-}
-div .salir-group:hover{
-    background-color: darkred;
-}
-
-div .agregar-usuario-group:hover{
-    background-color: dimgrey;
 }

@@ -1,0 +1,64 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/editarHabitacion.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <div class="whiteBox">
+
+    </div>
+
+    <div class="general_frame">
+        <div class="forms_container">
+            <div class="container_title"></div>
+            <h1 class="title valign-text-middle">Gestionar Habitaciones</h1>
+            <div class="salir-group valign-text-middle">
+                <div class="salir"><a href="./menu_SAdmin.html">Salir</a></div>
+            </div>
+            <div class="forms">
+                
+                <div class="form_registro">
+                    <form action="" method="POST">
+                        <div class="form_title">
+                            <h1>Editar Habitaciones</h1>
+                        </div>
+                        <div class="input-object">
+                            {{form1.numHabitacion.label}}
+                            <!-- <input class="agregarInput" type="text" name="room_number" id="room_number"> -->
+                            {{form1.numHabitacion(class_="agregarInput")}}
+                        </div>
+                        <div class="input-object">
+                            <label for="room_capacity">Capacidad</label>
+                            
+                            <select class="agregarInput" id="room_capacity" name="room_capacity">
+                                {% for item in data1 %}
+                                <option value="{{item.capacidad}}">{{item.capacidad}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label for="room_layout">Acomodación:</label>
+                            <select class="agregarInput" id="room_layout" name="room_layout">
+                                {% for item in data2 %}
+                                <option value="{{item.acomodacion}}">{{item.acomodacion}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="input-object">
+                            <label for="room_bath">Baño:</label>
+                            <select class="agregarInput" id="room_bath" name="room_bath">
+                                {% for item in data3 %}
+                                <option value="{{item.baño}}">{{item.baño}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="centerButton">         
+                                     {{form1.editarButton(class_="agregarButton button")}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
