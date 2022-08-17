@@ -66,9 +66,9 @@ def sql_insert_reserva(num_doc,fecha_inicio,fecha_fin,num_hab):
     con.commit()
     con.close()
 
-def sql_select_reserva(codigo_reserva):
-    strsql="SELECT * FROM reservaciones WHERE codigo_reserva = ?"
-    val=(codigo_reserva)
+def sql_select_reserva(numId):
+    strsql="SELECT * FROM reservaciones WHERE num_doc = ?"
+    val=(numId)
     print(strsql)
     con=sql_connection()
     cursor_Obj=con.cursor()
@@ -78,7 +78,7 @@ def sql_select_reserva(codigo_reserva):
     return reserva
 
 def sql_edit_reserva(num_doc,fecha_inicio,fecha_fin,num_hab,codigo_reserva):
-    strsql="UPDATE reservaciones SET num_doc = ? , SET fecha_inicio = ? , SET fecha_fin = ?, SET num_habitacion WHERE codigo_reserva = ?"
+    strsql="UPDATE reservaciones SET num_doc = ? , fecha_inicio = ? , fecha_fin = ?, num_habitacion = ? WHERE codigo_reserva = ?"
     val=(num_doc,fecha_inicio,fecha_fin,num_hab,codigo_reserva)
     print(strsql)
     con=sql_connection()
@@ -141,6 +141,7 @@ def sql_insert_calificacion(num_doc,num_habitacion,codigo_reserva,comentarios,ca
     strsql="INSERT INTO calificaciones (num_doc,num_habitacion,codigo_reserva,comentarios,calificacion) VALUES(?,?,?,?,?)"
     val=(num_doc,num_habitacion,codigo_reserva,comentarios,calificacion)
     print(strsql)
+    print(val)
     con=sql_connection()
     cursor_Obj=con.cursor()
     cursor_Obj.execute(strsql,val)

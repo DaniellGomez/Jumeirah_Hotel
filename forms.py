@@ -84,7 +84,35 @@ class GestionReserva(FlaskForm):
     eliminar = SubmitField("Eliminar", id="eliminar")
     actualizar = SubmitField("Actualizar", id="actualizar")
 
+class RealizarReserva(FlaskForm):
+    numId = StringField("N° Identificación", validators = [DataRequired()])
+    fechaInicio = DateField("Fecha de entrada", validators = [DataRequired()])
+    fechaFinal = DateField("Fecha de salida", validators = [DataRequired()])
+    numHabitacion = StringField("N° Habitación", validators = [DataRequired()])
+    codigoReserva = StringField("Codigo de la Reserva")
+    realizarReserva = SubmitField("Realizar Reserva", id="hacerReserva", name="button")
+
+class EditarReserva(FlaskForm):
+    numId = StringField("N° Identificación", validators = [DataRequired()])
+    fechaInicio = DateField("Fecha de entrada", validators = [DataRequired()])
+    fechaFinal = DateField("Fecha de salida", validators = [DataRequired()])
+    numHabitacion = StringField("N° Habitación", validators = [DataRequired()])
+    codigoReserva = StringField("Codigo de la Reserva")
+    editarReserva = SubmitField("Editar Reserva", id="editarReserva", name="button")
+
+class EliminarReserva(FlaskForm):
+    codigoReserva = StringField("Codigo de la Reserva")
+    eliminarReserva = SubmitField("Eliminar Reserva", id="editarReserva", name="button")
+
 class InicioSesion(FlaskForm):
     email = EmailField("Email", validators = [DataRequired()])
     password = PasswordField("Contraseña", validators = [DataRequired()])
     iniciarSesion = SubmitField("Iniciar Sesión", id = "iniciarSesion")
+
+class CalificarReserva(FlaskForm):
+    #sql_insert_calificacion(num_doc,num_habitacion,codigo_reserva,comentarios,calificacion)
+    numId = StringField("N° Identificación", validators = [DataRequired()])
+    numHabitacion = StringField("N° Habitación", validators = [DataRequired()])
+    codigoReserva = StringField("Codigo de la Reserva", validators = [DataRequired()])
+    comentario = StringField("Comentarios", validators = [DataRequired()])
+    calificar = SubmitField("Calificar Reserva", id="editarReserva", name="button")

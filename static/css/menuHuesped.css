@@ -107,36 +107,94 @@ body{
 .opcion1{
     position: absolute;
     width: 382px;
-    height: 66px;
-    left: 25%;
-    top: 15%;
+    height: 40px;
+    left: 14rem;
+    top: 4rem;
     background: #323232;
     border-radius: 50px;
     margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .opcion2{
     position: absolute;
     width: 382px;
-    height: 66px;
-    left: 25%;
-    top: 50%;
+    height: 40px;
+    left: 14rem;
+    top: 8rem;
     background: #323232;
     border-radius: 50px;
+    margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
 }
 
+.opcion3{
+    position: absolute;
+    width: 382px;
+    height: 40px;
+    left: 14rem;
+    top: 12rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.opcion4{
+    position: absolute;
+    width: 382px;
+    height: 40px;
+    left: 14rem;
+    top: 16rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
 
 .opcionsalir{
     position: absolute;
     width: 110px;
     height: 50px;
-    left: 60%;
-    top: 75%;
+    left: 80%;
+    top: 80%;
     background: #765B5B;
     border-radius: 70px;
 }
 
-.gestionar-habitaciones{
+/* .gestionar-habitaciones{
     position: absolute;
     width: 231px;
     height: 36px;
@@ -151,7 +209,7 @@ body{
     align-items: center;
     text-align: center;
     color: #FFFFFF;
-} 
+} */
 
 .gestionar-reservas{
     position: absolute;

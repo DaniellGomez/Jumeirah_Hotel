@@ -218,12 +218,53 @@ def inicioSesion():
     titulo = "Inicio de Sesión", 
     logo_img = logo_path)
 
-
-
 @app.route('/menuhuesped')
 def menuHuesped():
     return render_template("menuHuesped.html", titulo = "Menú Huespedes", logo_img = logo_path)
 
-@app.route('/calificarreserva')
+@app.route('/realizarreserva', methods=['GET', 'POST'])
+def realizarReserva():
+    formulario1 = RealizarReserva()
+    estandar_path = os.path.join(app.config['UPLOAD_FOLDER'], 'estandarReservaUser.png')
+
+    if request.method== "POST":
+        if request.form['button'] == 'Realizar Reserva':
+            print(type(formulario1.fechaInicio.data))
+            sql_insert_reserva(formulario1.numId.data, formulario1.fechaInicio.data, formulario1.fechaFinal.data, formulario1.numHabitacion.data)
+            reserva = sql_select_reserva(formulario1.numId.data)
+            formulario1.codigoReserva.data = reserva[0][0]
+
+    return render_template("realizarReserva.html", titulo = "Realizar Reserva", logo_img = logo_path, form = formulario1, estandar = estandar_path)
+
+@app.route('/editarreserva', methods=['GET', 'POST'])
+def editarReserva():
+    formulario1 = EditarReserva()
+    estandar_path = os.path.join(app.config['UPLOAD_FOLDER'], 'estandarReservaUser.png')
+
+    if request.method== "POST":
+        if request.form['button'] == 'Editar Reserva':
+            print(type(formulario1.fechaInicio.data))
+            sql_edit_reserva(formulario1.numId.data, formulario1.fechaInicio.data, formulario1.fechaFinal.data, formulario1.numHabitacion.data, formulario1.codigoReserva.data)
+
+    return render_template("editarReserva.html", titulo = "Editar Reserva", logo_img = logo_path, form = formulario1, estandar = estandar_path)
+
+@app.route('/eliminarreserva', methods=['GET', 'POST'])
+def eliminarReserva():
+    formulario1 = EliminarReserva()
+    estandar_path = os.path.join(app.config['UPLOAD_FOLDER'], 'estandarReservaUser.png')
+
+    if request.method== "POST":
+        if request.form['button'] == 'Eliminar Reserva':
+            sql_delete_reserva(formulario1.codigoReserva.data)
+
+    return render_template("eliminarReserva.html", titulo = "Eliminar Reserva", logo_img = logo_path, form = formulario1, estandar = estandar_path)
+
+@app.route('/calificarreserva', methods=['GET', 'POST'])
 def calificarReserva():
-    return render_template("calificarReserva.html", titulo = "Calificar reserva", logo_img = logo_path)
+    formulario1 = CalificarReserva()
+
+    if request.method== "POST":
+        if request.form['button'] == 'Calificar Reserva':
+            sql_insert_calificacion(formulario1.numId.data, formulario1.numHabitacion.data, formulario1.codigoReserva.data, formulario1.comentario.data, request.form['calificacion'])
+
+    return render_template("calificarReserva.html", titulo = "Calificar reserva", logo_img = logo_path, form = formulario1)

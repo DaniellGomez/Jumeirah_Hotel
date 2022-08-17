@@ -22,45 +22,46 @@
     </div>
 
     <div id="form">
-        <form action="" method="">
+        <form action="" method="POST">
             <div id="flexForm">
                 <div id="formLabels">
                     <label>Reserva ID.</label>
                     <br/>
-                    <label>Huesped</label>
+                    <label>Huesped ID</label>
                     <br/>
-                    <label>Fechas</label>
+                    <label>N° Habitación</label>
                     <br/>
                     <label>Calificación</label>
                     <br/>
                     <label>Comentario</label>
                 </div>
                 <div id="formInputs">
-                <input class="inputRegistro" type="text" name="emailUser" autocomplete="email"/>
-                <button id="buscarButton">Buscar</button>
-                <br/>
-                <input class="inputRegistro" type="text" name="idUser" autocomplete="id"/>
-                <br/>
-                <input class="inputRegistro" type="email" name="emailUser" autocomplete="email"/>
-                <br/>
-                <input class="radioOption" type="radio" name="calificacion" value="1">
-                <label>1</label>
-                <input class="radioOption" type="radio" name="calificacion" value="2">
-                <label>2</label>
-                <input class="radioOption" type="radio" name="calificacion" value="3">
-                <label>3</label>
-                <input class="radioOption" type="radio" name="calificacion" value="4">
-                <label>4</label>
-                <input class="radioOption" type="radio" name="calificacion" value="5">
-                <label>5</label>
-                <br/>
-                <input id="comentarioField" class="inputRegistro" type="text" name="comment">
+                    <!-- <input class="inputRegistro" type="text" name="emailUser" autocomplete="email"/>
+                    -->
+                    {{form.codigoReserva(class_="inputRegistro")}}
+                    <br/>
+                    {{form.numId(class_="inputRegistro")}}
+                    <br/>
+                    {{form.numHabitacion(class_="inputRegistro")}}
+                    <br/>
+                    <input class="radioOption" type="radio" name="calificacion" value="1">
+                    <label>1</label>
+                    <input class="radioOption" type="radio" name="calificacion" value="2">
+                    <label>2</label>
+                    <input class="radioOption" type="radio" name="calificacion" value="3">
+                    <label>3</label>
+                    <input class="radioOption" type="radio" name="calificacion" value="4">
+                    <label>4</label>
+                    <input class="radioOption" type="radio" name="calificacion" value="5">
+                    <label>5</label>
+                    <br/>
+                    {{form.comentario(class_="inputRegistro")}}
                 </div>
             </div>
+            <div class="buttonContainer">
+                {{form.calificar(class_="button")}}
+            </div>
         </form>
-        <div id="buttonsRegistro">
-            <button href="UserMain.html" id="buttonRegistro" class="button" value="enviarFormulario"><a id="buttonText" href="#">Enviar</a></button>
-        </div>
 
     </div>
 {% endblock %}

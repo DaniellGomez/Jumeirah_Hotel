@@ -9,19 +9,14 @@
         <div class="cuerpo">
             <div class="centerItems">    
                 <h1 class="admin_welcome">Bienvenido, ¿qué desea hacer? </h1>
-                <div class="opcion1">
-                    <div class="gestionar-habitaciones valign-text-middle">
-                        <a class="buttonText" href="SAdmin_gestionar_habitaciones.html">Realizar reserva</a>
-                    </div>
-                </div>
-                <div class="opcion2">
-                    <div class="gestionar-reservas valign-text-middle">
-                        <a class="buttonText" href="admin_reservas.html">Calificar reserva</a>
-                    </div>
-                </div>
+                <a class="buttonText opcion1 gestionar-habitaciones valign-text-middle" href="/realizarreserva">Realizar reserva</a>
+                <a class="buttonText opcion2 gestionar-habitaciones valign-text-middle" href="/editarreserva">Editar reserva</a>
+                <a class="buttonText opcion3 gestionar-habitaciones valign-text-middle" href="/eliminarreserva">Eliminar reserva</a>
+                <a class="buttonText opcion4 gestionar-habitaciones valign-text-middle" href="/calificarreserva">Calificar reserva</a>
             </div>
-                <div class="opcionsalir">
-                    <a href="HomePage.html" class="gestion-salir">Salir</a>
+            <div class="opcionsalir">
+                <a href="/home" class="gestion-salir">Salir</a>
+            </div>
         </div>
     </section>
 {% endblock %}
