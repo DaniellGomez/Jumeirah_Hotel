@@ -15,10 +15,10 @@
         </div>
 
         <div id="form" name="form">
-            <form action="" method="">
+            <form action="" method="POST">
                 <select id="userRol" name="userRol">
                     {% for item in data %}
-                        <option value="{{item.rol}}">{{item.rol}}</option>
+                    <option value="{{item.rol}}">{{item.rol}}</option>
                     {% endfor %}
                 </select>
                 <br/>
@@ -34,13 +34,14 @@
                 -->
                 {{form.password()}}
                 <br/>
+                <div id="buttons">
+                    <!-- <input type="button" class="button" onclick="iniciarSesion()" value="Iniciar sesión"/>
+                    -->
+                    {{form.iniciarSesion(class_="button")}}
+                    <input type="button" class="button" href="registroHuesped.html" value="Registro"/>
+                </div>
             </form>
-            <div id="buttons">
-                <!-- <input type="button" class="button" onclick="iniciarSesion()" value="Iniciar sesión"/>
-                -->
-                {{form.iniciarSesion(class_="button")}}
-                <input type="button" class="button" href="registroHuesped.html" value="Registro"/>
-            </div>
+            
             
         </div>
     </section>

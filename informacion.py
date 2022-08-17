@@ -17,8 +17,9 @@ class informacion:
         #Encode password into a readable utf-8 byte code: 
         password = password.encode('utf-8')
         # Hash the ecoded password and generate a salt: 
-        hashedPassword = bcrypt.hashpw(password, bcrypt.gensalt(10))
+        hashedPassword = bcrypt.hashpw(password, bcrypt.gensalt(5))
         print(hashedPassword)
+        hashedPassword=hashedPassword.decode('utf-8')
         sql_insert_huesped(id, nombre, email, "huesped", hashedPassword)
 
     @staticmethod

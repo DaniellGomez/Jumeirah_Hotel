@@ -55,3 +55,16 @@ def sql_delete_admin(doc):
         conn.close()
     except Error:
         print(Error)
+
+
+def sql_get_password_admin(email):
+    # try:
+        strsql="SELECT password FROM pass_role WHERE num_doc in (SELECT num_doc from administradores WHERE email = ?)"
+        val=(email)
+        print(strsql)
+        conn, cur = db.slq_connection()
+        cur.execute(strsql,[val])
+        password = cur.fetchall()
+        conn.close()
+        passw=" ".join(map(str,password[0]))
+        return passw.encode('utf-8')

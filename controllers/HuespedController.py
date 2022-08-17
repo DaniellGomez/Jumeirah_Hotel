@@ -76,6 +76,7 @@ def sql_get_password_huesped(email):
         print(strsql)
         conn, cur = db.slq_connection()
         cur.execute(strsql,[val])
-        email = cur.fetchall()
+        password = cur.fetchall()
         conn.close()
-        return password
+        passw=" ".join(map(str,password[0]))
+        return passw.encode('utf-8')

@@ -194,20 +194,34 @@ def habitacionesAdmin():
 @app.route('/iniciosesion', methods=['GET', 'POST'])
 def inicioSesion():
     formulario = InicioSesion()
-    correo=formulario.email.data
-    password=formulario.password.data
+    #correo=formulario.email.data
+    #password=formulario.password.data
 
-    if request.method== "POST":
+    if request.method== 'POST':
         if request.form['iniciarSesion'] == 'Iniciar Sesión':
             correo=formulario.email.data
+            print(correo)
             password=formulario.password.data
             password = password.encode('utf-8')
-            hashedPassword = bcrypt.hashpw(password, bcrypt.gensalt(10))
+            print(password)
+            print(sql_get_password_huesped(correo))
+            
+            if request.form.get('userRol') == 'Huesped':
+                if bcrypt.checkpw(password,sql_get_password_huesped(correo)): 
+                    print("Inicio Sesión fue exitoso")
+                    session['usuario'] = correo
+                    return redirect("menuhuesped")
+            elif request.form.get('userRol') == 'Administrador':
+                if bcrypt.checkpw(password,sql_get_password_admin(correo)): 
+                    print("Inicio Sesión fue exitoso")
+                    session['usuario'] = correo
+                    return redirect("menuadmin")
+            elif request.form.get('userRol') == 'Superadministrador':
+                if bcrypt.checkpw(password,sql_get_password_sadmin(correo)): 
+                    print("Inicio Sesión fue exitoso")
+                    session['usuario'] = correo
+                    return redirect("menusuperadmin")
 
-            if correo == sql_get_email_huesped(correo) and hashedPassword == sql_get_password_huesped(correo):
-                print("Inicio Sesión fue exitoso")
-                session['usuario'] = correo
-                return redirect("menuHuesped")
             else:
                 print("Password Incorrecto")
                 return redirect("iniciosesion")
