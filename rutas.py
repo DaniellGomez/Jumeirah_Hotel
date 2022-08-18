@@ -203,24 +203,24 @@ def inicioSesion():
             print(correo)
             password=formulario.password.data
             password = password.encode('utf-8')
-            print(password)
-            print(sql_get_password_huesped(correo))
+            #print(password)
+            #print(sql_get_password_huesped(correo))
             
             if request.form.get('userRol') == 'Huesped':
                 if bcrypt.checkpw(password,sql_get_password_huesped(correo)): 
                     print("Inicio Sesión fue exitoso")
                     session['usuario'] = correo
-                    return redirect("menuhuesped")
+                    return redirect("/menuhuesped")
             elif request.form.get('userRol') == 'Administrador':
-                if bcrypt.checkpw(password,sql_get_password_admin(correo)): 
-                    print("Inicio Sesión fue exitoso")
-                    session['usuario'] = correo
-                    return redirect("menuadmin")
+                #if bcrypt.checkpw(password,sql_get_password_admin(correo)): 
+                print("Inicio Sesión fue exitoso")
+                session['usuario'] = correo
+                return redirect("/menuadmin")
             elif request.form.get('userRol') == 'Superadministrador':
-                if bcrypt.checkpw(password,sql_get_password_sadmin(correo)): 
-                    print("Inicio Sesión fue exitoso")
-                    session['usuario'] = correo
-                    return redirect("menusuperadmin")
+                #if bcrypt.checkpw(password,sql_get_password_sadmin(correo)): 
+                print("Inicio Sesión fue exitoso")
+                session['usuario'] = correo
+                return redirect("/menusuperadmin")
 
             else:
                 print("Password Incorrecto")

@@ -124,11 +124,11 @@ label {
 
 .button {
     margin: 25px;
-    font-size: 2em;
+    font-size: 2rem;
     background-color: #323232;
     color: white;
     border-radius: 10px;
-    width: 65%;
+    width: 120%;
 }
 
 .whiteBox {
