@@ -7,56 +7,10 @@
 }
 
 
-nav{
-    background-color: #323232;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 4rem;
-    font-family: var(font-title);
-    position: fixed;
-    z-index: 100;
-}
-
-nav .logo{
-    height: 3rem;
-    margin-left: 2rem;
-}
-
-nav .logo img{
-    height: 100%;
-}
-
-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    font-size:1.2rem;
-}
-
-nav ul li,a{
-    color: #FFFFFF;
-    margin: 0px 1rem 0px 1rem;
-    text-decoration: none;
-}
-
-/* nav ul li:nth-child(4){
-    display: none;
-} */
-
-nav .login_button{
-    margin-right: 2rem;
-    border: 2px solid #FFFFFF;
-    border-radius: 5px;
-    padding: .3rem;
-}
-
 .general_frame{
     position: absolute;
     width: 100%;
-    height: 140%;
+    height: 100%;
     left: 0%;
     top: 0%;
     background: none;
@@ -64,7 +18,7 @@ nav .login_button{
     font-style: normal;
     text-align: center;
     background-color: #FFFFFF;
-    background-image: url(../images/unsplash_g5ZIXjzRGds.png);
+    background-image: url(../images/fondoReservas.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -72,8 +26,10 @@ nav .login_button{
 
 
 h1 {
+    color: white;
     margin: auto;
     padding-top: 1.5%;
+    padding-bottom: 1.5%;
     font-size: 1rem;
 }
 
@@ -100,7 +56,7 @@ label {
 
 .forms_container{
     background-color: rgba(217,217,217,1);
-    height: 70%;
+    height: 75%;
     width: 95%;
     opacity: 95%;
     display: flex;
@@ -110,26 +66,29 @@ label {
     align-content: space-between;
     justify-content: space-between;
     flex-flow: row wrap;
+    border-radius: 20px;
 }
 
 .container_title{
-    background-color: rgb(231, 227, 216);
+    background-color: #323232;
     width: 100%;
-    height:8%;
+    height:12%;
     flex: none;
     order: 0;
-    
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .title{
-    color: black;
+    color: white;
     font-family: "Kaisei Decol";
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0;
     position: absolute;
-    left: 2rem;
-    top: -0.5rem;
+    left: 40%;
+    top: -1%;
 }
 
 .salir-group{
@@ -139,7 +98,7 @@ label {
     border-radius: 70px;
     height: 2rem;
     position: absolute;
-    padding: 10px 27.7px;
+    padding: 10px 37.7px;
     width: 2rem;
     bottom: 1rem;
     right: 2rem;
@@ -153,20 +112,43 @@ label {
 .form_registro{
     display: flex;
     background-color: rgb(231, 227, 216);
-    height: 28rem;
+    height: 80%;
     position: absolute;
-    top: 5rem;
+    top: 15%;
     align-items: center;
-    left: 1.5rem;
+    left: 20%;
     flex: none;
     justify-content: space-between;
     order: 1;
+    width: 60%;
+}
+
+.label {
+    position: absolute;
+    left: 5%;
+}
+
+.realizarInput {
+    position: absolute;
+    width: 60%;
+    left: 35%;
+}
+
+.realizarLabel {
+    position: absolute;
+    left: 5%;
+}
+
+.realizarInput {
+    position: absolute;
+    width: 60%;
+    left: 35%;
 }
 
 .form_title{
     background-color: rgba(49, 49, 49, 1);
     display: flex;
-    height: 2rem;
+    height: 3rem;
     top: 0rem;
     color:#FFFFFF;
     font-family: "Kaisei Decol";
@@ -175,7 +157,6 @@ label {
     width: 100%;
     flex: none;
     order:0;
-    
 }
 
 .form_buscar{
@@ -183,29 +164,43 @@ label {
     background-color: rgb(231, 227, 216);
     height: 10rem;
     position: absolute;
-    top: 5rem;
-    right: 3rem;
+    top: 10%;
+    left: 49%;
     width: 35rem;
     justify-self:center;
     align-items: center;
     flex: none;
     order: 2;
+    width: 50%;
 }
 
-.form_editar{
+.form_realizar{
     display: flex;
     background-color: rgb(231, 227, 216);
-    height: 17rem;
+    height: 53%;
     position: absolute;
-    top: 16rem;
-    right: 3rem;
+    top: 38%;
     width: 35rem;
     flex: none;
     order: 3;
     align-items: center;
+    left: 49%;
+    width: 50%;
 }
 
-.agregar-habitacion-group{
+.realizarReservaAdmin {
+    letter-spacing: 0;
+    color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    /* padding: 4px 60px;
+    border-radius: 70px; */
+}
+
+.realizar-reserva-group{
     display: flex;
     align-items: center;
     background-color: rgba(49, 49, 49, 1);
@@ -217,11 +212,11 @@ label {
     align-self: center;
     flex: none;
     position: absolute;
-    left: 10rem;
+    left: 40%;
     bottom: 4rem;
 }
 
-.agregar-habitacion{
+.realizar-reserva{
     letter-spacing: 0;
     color: #FFFFFF;
 }
@@ -289,11 +284,12 @@ label {
     color: #FFFFFF;
 }
 
-/* .input-object{
-   
-    
-
-} */
+.input-object{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: 15px;
+}
 
 input{
     padding: 0.1rem;
@@ -321,18 +317,10 @@ a{
 nav .login_button:hover{
     background-color: dimgrey;
 }
-div .agregar-habitacion-group:hover{
+div .realizar-reserva-group:hover{
     background-color: dimgrey;
-}
-div .buscar-group:hover{
-    background-color: dimgrey;
-}
-div .actualizar-group:hover{
-    background-color: dimgrey;
-}
-div .eliminar-group:hover{
-    background-color: darkred;
 }
 div .salir-group:hover{
     background-color: darkred;
 }
+

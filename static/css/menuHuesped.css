@@ -1,14 +1,19 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 nav{
     background-color: #323232;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 98.5%;
+    width: 100%;
     height: 4rem;
     font-family: var(font-title);
     position: fixed;
     z-index: 100;
-    border-radius: 5px;
 }
 
 nav .logo{
@@ -56,18 +61,17 @@ nav .login_button:hover{
 
 
 body{
-    background-image: url(../images/unsplash_g5ZIXjzRGds.png);
+    background-image: url(../images/fondoMenuAdmin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 30%;
 }
 
 .cuerpo{
     position: absolute;
     width: 66%;
-    height: 80%;
+    height: 70%;
     left: 20%;
-    top: 15%;
+    top: 25%;
     background: #FFFFFF;
     opacity: 0.9;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
@@ -84,8 +88,8 @@ body{
     position: absolute;
     width: 711px;
     height: 72px;
-    left: 55px;
-    top: 10px;
+    left: 20%;
+    top: 0;
     
     font-family: 'Kaisei Decol';
     font-style: normal;
@@ -103,35 +107,94 @@ body{
 .opcion1{
     position: absolute;
     width: 382px;
-    height: 66px;
-    left: 265px;
-    top: 124px;
+    height: 40px;
+    left: 14rem;
+    top: 4rem;
     background: #323232;
     border-radius: 50px;
     margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .opcion2{
     position: absolute;
     width: 382px;
-    height: 66px;
-    left: 265px;
-    top: 297px;
+    height: 40px;
+    left: 14rem;
+    top: 8rem;
     background: #323232;
     border-radius: 50px;
+    margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.opcion3{
+    position: absolute;
+    width: 382px;
+    height: 40px;
+    left: 14rem;
+    top: 12rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.opcion4{
+    position: absolute;
+    width: 382px;
+    height: 40px;
+    left: 14rem;
+    top: 16rem;
+    background: #323232;
+    border-radius: 50px;
+    margin-top: 40px;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .opcionsalir{
     position: absolute;
     width: 110px;
     height: 50px;
-    left: 745px;
-    top: 400px;
+    left: 80%;
+    top: 80%;
     background: #765B5B;
     border-radius: 70px;
 }
 
-.gestionar-habitaciones{
+/* .gestionar-habitaciones{
     position: absolute;
     width: 231px;
     height: 36px;
@@ -146,7 +209,7 @@ body{
     align-items: center;
     text-align: center;
     color: #FFFFFF;
-} 
+} */
 
 .gestionar-reservas{
     position: absolute;
@@ -180,6 +243,7 @@ body{
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+    margin: auto;
 }
 
 div .opcion1:hover{
@@ -190,4 +254,8 @@ div .opcion2:hover{
 }
 div .opcionsalir:hover{
     background-color: darkred;
+}
+
+.buttonText {
+    font-size: x-large;
 }

@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Kaisei+Decol:400");
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+.general_frame{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    background: none;
+    font-family: 'Kaisei Decol';
+    font-style: normal;
+    text-align: center;
+    background-color: #FFFFFF;
+    background-image: url(../images/fondoReservas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+h1 {
+    color: white;
+    margin: auto;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    font-size: 1rem;
+}
+
+
+select {
+    font-family: 'Hind';
+    font-style: normal;
+    background-color:#AAA;
+    width: 400px;
+}
+
+input {
+    background-color: #AAA;
+    width: 400px;
+    font-family: 'Hind';
+    font-style: normal;
+}
+
+label {
+    font-family: 'Hind';
+    font-style: normal;
+}
+
+
+.forms_container{
+    background-color: rgba(217,217,217,1);
+    height: 75%;
+    width: 95%;
+    opacity: 95%;
+    display: flex;
+    position: absolute;
+    left: 2rem;
+    top: 6rem;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    border-radius: 20px;
+}
+
+.container_title{
+    background-color: #323232;
+    width: 100%;
+    height:12%;
+    flex: none;
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.title{
+    color: white;
+    font-family: "Kaisei Decol";
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    position: absolute;
+    left: 40%;
+    top: -1%;
+}
+
+.salir-group{
+    display: flex;
+    align-items: center;
+    background-color: #755b5b;
+    border-radius: 70px;
+    height: 2rem;
+    position: absolute;
+    padding: 10px 37.7px;
+    width: 2rem;
+    bottom: 1rem;
+    right: 2rem;
+    justify-content: center;
+}
+
+.salir{
+    letter-spacing: 0;
+}
+
+.form_registro{
+    display: flex;
+    background-color: rgb(231, 227, 216);
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    align-items: center;
+    left: 20%;
+    flex: none;
+    justify-content: space-between;
+    order: 1;
+    width: 60%;
+}
+
+.label {
+    position: absolute;
+    left: 5%;
+}
+
+.eliminarInput {
+    position: absolute;
+    width: 60%;
+    left: 35%;
+}
+
+.eliminarLabel {
+    position: absolute;
+    left: 5%;
+}
+
+.eliminarInput {
+    position: absolute;
+    width: 60%;
+    left: 35%;
+}
+
+.form_title{
+    background-color: rgba(49, 49, 49, 1);
+    display: flex;
+    height: 3rem;
+    top: 0rem;
+    color:#FFFFFF;
+    font-family: "Kaisei Decol";
+    align-self:flex-start;
+    position: absolute;
+    width: 100%;
+    flex: none;
+    order:0;
+}
+
+.form_buscar{
+    display: flex;
+    background-color: rgb(231, 227, 216);
+    height: 10rem;
+    position: absolute;
+    top: 10%;
+    left: 49%;
+    width: 35rem;
+    justify-self:center;
+    align-items: center;
+    flex: none;
+    order: 2;
+    width: 50%;
+}
+
+.form_eliminar{
+    display: flex;
+    background-color: rgb(231, 227, 216);
+    height: 53%;
+    position: absolute;
+    top: 38%;
+    width: 35rem;
+    flex: none;
+    order: 3;
+    align-items: center;
+    left: 49%;
+    width: 50%;
+}
+
+.eliminarReservaAdmin {
+    letter-spacing: 0;
+    color: #FFFFFF;
+    background-color: #323232;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    /* padding: 4px 60px;
+    border-radius: 70px; */
+}
+
+.eliminar-reserva-group{
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 15rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 40%;
+    bottom: 4rem;
+}
+
+.eliminar-reserva{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.buscar-group{
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 10rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 12rem;
+    bottom: 1rem;
+}
+
+.buscar{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.actualizar-group{
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 8rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 7rem;
+    bottom: 1.5rem;
+}
+
+.actualizar{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.eliminar-group{
+    display: flex;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 70px;
+    height: 2rem;
+    padding: 10px 27.7px;
+    width: 8rem;
+    justify-content: center;
+    align-self: center;
+    flex: none;
+    position: absolute;
+    left: 19rem;
+    bottom: 1.5rem;
+}
+
+.eliminar{
+    letter-spacing: 0;
+    color: #FFFFFF;
+}
+
+.input-object{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding: 15px;
+}
+
+input{
+    padding: 0.1rem;
+    margin: auto;
+    left: 1rem;
+    width: 25rem;
+    font-family: "Kaisei Decol";
+    align-self: center;
+}
+
+select{
+    padding: 0.1rem;
+    margin: auto;
+    left: 1rem;
+    width: 25rem;
+    font-family: "Kaisei Decol";
+    align-self: center;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav .login_button:hover{
+    background-color: dimgrey;
+}
+div .eliminar-reserva-group:hover{
+    background-color: dimgrey;
+}
+div .salir-group:hover{
+    background-color: darkred;
+}

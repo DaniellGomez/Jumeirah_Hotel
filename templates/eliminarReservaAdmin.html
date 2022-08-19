@@ -1,0 +1,40 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/eliminarReservaAdmin.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <div class="whiteBox">
+
+    </div>
+
+    <div class="general_frame">
+        <div class="forms_container">
+            <div class="container_title"></div>
+            <h1 class="title valign-text-middle">Gestionar Reservas</h1>
+            <div class="salir-group valign-text-middle">
+                <div class="salir"><a href="/home">Salir</a></div>
+            </div>
+            <div class="forms">
+                <div class="form_registro">
+                    <form action="" method="POST">
+                        <div class="form_title">
+                            <h1>Eliminar una reserva</h1>
+                        </div>
+                        <div class="input-object">
+                            {{form1.codigoReserva.label(class_="label")}}
+                            {{form1.codigoReserva(class_="eliminarInput")}}
+                        </div>
+                        <div class="eliminar-reserva-group">
+                            <div class="eliminar-reserva valign-text-middle">
+                                {{form1.eliminarReservaAdmin(class_="eliminarReservaAdmin")}} 
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

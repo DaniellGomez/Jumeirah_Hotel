@@ -1,0 +1,39 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/eliminarHabitacion.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <div class="whiteBox">
+
+    </div>
+
+    <div class="general_frame">
+        <div class="forms_container">
+            <div class="container_title"></div>
+            <h1 class="title valign-text-middle">Gestionar Habitaciones</h1>
+            <div class="salir-group valign-text-middle">
+                <div class="salir"><a href="/menusuperadmin">Salir</a></div>
+            </div>
+            <div class="forms">
+                
+                <div class="form_registro">
+                    <form action="" method="POST">
+                        <div class="form_title">
+                            <h1>Eliminar Habitaciones</h1>
+                        </div>
+                        <div class="input-object">
+                            {{form1.numHabitacion.label}}
+                            <!-- <input class="agregarInput" type="text" name="room_number" id="room_number"> -->
+                            {{form1.numHabitacion(class_="agregarInput")}}
+                        </div>
+                        <div class="centerButton">         
+                                     {{form1.eliminar(class_="agregarButton button")}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reservaHuesped.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <form method="POST">
+        <div class="container">
+            <h1>Editar Reserva</h1>
+            <div class="filters">
+                <div class="input_selector">
+                    {{form.fechaInicio.label}}
+                    {{form.fechaInicio(size = 15)}}
+                </div>
+                <div class="input_selector">
+                    {{form.fechaFinal.label}}
+                    {{form.fechaFinal(size = 15)}}
+                </div>
+            </div>
+            <div class="room_finded">
+                <h2 id="doble">Cuarto Doble</h2>
+                <div class="room_content">
+                    <div class="image">
+                        <!-- <img src="../images/Habitacion_Estandar.png" alt="Image"> -->
+                        <img src="{{ estandar }}" alt="Image">
+                    </div>
+                    <div class="room_info">
+                        <div class="info_item">
+                            <h3>Nro de Cuarto</h3>
+                            <p>{{form.numHabitacion}}</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>N° Identificación</h3>
+                            <p>{{form.numId}}</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Personas</h3>
+                            <p>2 Personas</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Baño</h3>
+                            <p>Ducha duble y tina doble</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Servicios</h3>
+                            <p>Comida al cuarto 24hrs</p>
+                        </div>
+                        <div class="info_item">
+                            <h3>Código de la reserva</h3>
+                            <p>{{form.codigoReserva}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_actions">
+                    {{form.editarReserva(class_="buttons room_button")}}
+                </div>
+                
+            </div>
+        </div>
+    </form>
+{% endblock %}

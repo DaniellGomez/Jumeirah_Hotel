@@ -1,0 +1,54 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menuAdmin.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <section>
+        <div class="cuerpo">
+            <div class="centerItems">    
+                <h1 class="admin_welcome">Bienvenido, ¿qué desea hacer? </h1>
+            </div>
+            <div class="leftItems">    
+                <div class="opcion1">
+                    <div class="habitaciones valign-text-middle">
+                        <a class="buttonText" href="/agregarhabitacion">Agregar Habitaciones</a>
+                    </div>
+                </div>
+                <div class="opcion2">
+                    <div class="habitaciones valign-text-middle">
+                        <a class="buttonText" href="/editarhabitacion">Editar Habitaciones</a>
+                    </div>
+                </div>
+                <div class="opcion3">
+                    <div class="habitaciones valign-text-middle">
+                        <a class="buttonText" href="/eliminarhabitacion">Eliminar Habitaciones</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightItems">    
+                <div class="opcion4">
+                    <div class="reservas valign-text-middle">
+                        <a class="buttonText" href="/realizarreservaadmin">Realizar Reservas</a>
+                    </div>
+                </div>
+                <div class="opcion5">
+                    <div class="reservas valign-text-middle">
+                        <a class="buttonText" href="/editarreservaadmin">Editar Reservas</a>
+                    </div>
+                </div>
+                <div class="opcion6">
+                    <div class="reservas valign-text-middle">
+                        <a class="buttonText" href="/eliminarreservaadmin">Eliminar Reservas</a>
+                    </div>
+                </div>
+            </div>
+
+                <div class="opcionsalir">
+                    <a href="/home" class="gestion-salir">Salir</a>
+                </div>
+        </div>
+    </section>
+{% endblock %}

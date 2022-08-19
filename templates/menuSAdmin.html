@@ -1,0 +1,32 @@
+{% extends "navbar.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menuSAdmin.css')}}">
+{% endblock %}
+
+{% block principal %}
+    <style>
+        body {
+            background-image: url("/static/images/fondoMenuSAdmin.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <div class="menu-superadmin">
+        <div class="overlap-group3">
+            <div class="overlap-group4">
+                <h1 class="bienvenido">Bienvenido, ¿Qué desea hacer?: </h1>
+                <div class="buttonsContainer">
+                    <a class="buttonText gestionar-usuarios valign-text-middle overlap-group1" href="/agregarusuario">Agregar Usuarios</a>
+                    <a class="buttonText gestionar-usuarios valign-text-middle overlap-group2" href="/editarusuario">Editar Usuarios</a>
+                    <a class="buttonText gestionar-usuarios valign-text-middle overlap-group5" href="/eliminarusuario">Eliminar Usuarios</a>
+                    <a class="buttonText gestionar-usuarios valign-text-middle overlap-group6" href="/agregarhabitacion">Agregar Habitaciones</a>
+                    <a class="buttonText gestionar-usuarios valign-text-middle overlap-group7" href="/editarhabitacion">Editar Habitaciones</a>
+                    <a class="buttonText gestionar-usuarios valign-text-middle overlap-group8" href="/eliminarhabitacion">Eliminar Habitaciones</a>
+                    <a class="buttonText salir overlap-group" href="/home">Salir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
